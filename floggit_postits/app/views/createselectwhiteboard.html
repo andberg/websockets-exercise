@@ -1,0 +1,19 @@
+<div class="create-and-select-wb">
+	<div class="page-header">
+	<h1>Welcome to Floggit postits  </h1> 
+	</div>
+	<div class="create-whiteboard">
+	<h2>Create new whiteboard</h2>
+		<input type="text" placeholder="Whiteboards name" class="form-control" ng-model="newWhiteboard"> 
+		<span class="input-group-btn">
+			<button class="btn btn-default" ng-click="createNewWhiteboard(newWhiteboard)">Create</button>
+		</span>
+	</div>
+	<div class="select-whiteboard">
+		<h2> Select whiteboard </h2>
+		<input class="form-control" placeholder="Search existing whiteboard" ng-model="searchText">
+		<div ng-repeat="board in allWhiteboards | filter:{name:searchText}">
+			<div class="wb-name" name="board.name" ng-model="whiteboard" ng-click="choosenWhiteboard(board.name)"> <span class="glyphicon glyphicon-comment"></span> {{board.name}} </div>
+		</div>	
+	</div>
+</div> 

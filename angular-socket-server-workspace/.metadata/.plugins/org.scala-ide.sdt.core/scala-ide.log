@@ -1,0 +1,14 @@
+2014-09-22 14:04:56,782 ERROR [Worker-6] - System.err - Sep 22, 2014 2:04:56 PM org.xnio.Xnio <clinit>
+INFO: XNIO version 3.1.0.Final
+2014-09-22 14:04:56,800 ERROR [Worker-6] - System.err - Sep 22, 2014 2:04:56 PM org.xnio.nio.NioXnio <clinit>
+INFO: XNIO NIO Implementation Version 3.1.0.Final
+2014-09-22 14:04:56,826 ERROR [Worker-6] - System.err - Sep 22, 2014 2:04:56 PM org.jboss.remoting3.EndpointImpl <clinit>
+INFO: JBoss Remoting version 4.0.0.Beta1
+2014-09-22 14:05:08,449 ERROR [Worker-23] - System.err - Sep 22, 2014 2:05:08 PM org.xnio.Xnio <clinit>
+INFO: XNIO version 3.2.0.Final
+2014-09-22 14:05:08,482 ERROR [Worker-23] - System.err - Sep 22, 2014 2:05:08 PM org.xnio.nio.NioXnio <clinit>
+INFO: XNIO NIO Implementation Version 3.2.0.Final
+2014-09-22 14:05:08,552 ERROR [Worker-23] - System.err - Sep 22, 2014 2:05:08 PM org.jboss.remoting3.EndpointImpl <clinit>
+INFO: JBoss Remoting version (unknown)
+2014-09-23 11:44:21,803 ERROR [Remoting "endpoint" I/O-1] - System.err - Sep 23, 2014 11:44:21 AM org.jboss.remoting3.remote.RemoteConnection handleException
+ERROR: JBREM000200: Remote connection failed: java.io.IOException: Connection reset by peer

@@ -1,0 +1,327 @@
+body {
+	font-size:18px;
+	border:1px solid #E8E8E8;
+	background-image: url('../images/whiteboard1.jpg');
+	position: fixed;
+	width: 100%;
+}
+html, body, .view {
+	border:none;
+	height: 100%;
+	position:relative;
+}
+
+// Create and Select Whiteboard 
+
+h1 {
+	font-size: 50px;
+	font-family:"Gloria Hallelujah", Arial, Helvetica, sans-serif; 
+	max-width: 700px; 
+}
+
+h2 {
+	font-size: 25px;
+	font-family:"Gloria Hallelujah", Arial, Helvetica, sans-serif;
+}
+
+.create-and-select-wb {
+	margin-left: auto; 
+	margin-right: auto;
+	max-width: 900px;  
+	input {
+		outline: 1;
+		padding-left: 10px;
+		border: none;
+		background-color: white;
+		max-width: 300px; 
+		right: 32px;
+	}
+}
+
+.wb-name{
+	padding: 9px; 
+
+}
+.wb-name:hover {
+	cursor: pointer; 
+	color: white; 
+
+}
+
+// Toolbar
+
+.toolbar:hover{
+	cursor: pointer; 
+}
+.toolbar-postit {
+	position: absolute;
+	bottom: 125px;
+	right: 107px;
+	width: 140px;
+	height: 140px;
+	transition: all 330ms;
+}
+.toolbar-postit img {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	/*background: red;*/
+}
+.tools {
+	position: relative;
+	top: 0;
+	left: 0;
+	padding: 15px 20px 20px 15px;
+	transition: opacity 200ms cubic-bezier(0,.99,.09,.99);
+	opacity: 0;
+	width: 100%;
+	height: 100%;
+}
+.bigPostit {
+	width: 300px;
+	height: 300px;
+}
+.bigPostit .tools {
+	opacity: 1;
+	transition: opacity 330ms cubic-bezier(1,.01,1,.43);
+}
+.tools *{
+	opacity: 1;
+	max-width: 100%;
+}
+.tools .menu {
+	font-family:"Gloria Hallelujah", Arial, Helvetica, sans-serif;
+	bottom: 0;
+	max-width: 160px;
+}
+.tools .button-bar {
+	width: 100%;
+	text-align: center;
+	display: block;
+	position: absolute;
+	bottom: 20px;
+	margin-left: -15px;
+}
+.tools .button {
+	font-size: 30px;
+	position: relative;
+	background: transparent;
+	border: none;
+	padding: 5px 30px 5px 30px;
+}
+.tools .categorySelectionError {
+	border: 1px solid red;
+}
+
+// Whiteboard
+
+.frame {
+	display: flex;
+	background-image: url('../images/whiteboard1.jpg');
+	background-size: 100% 100%;
+	padding: 20px;
+	-webkit-box-shadow: 3px 1px 68px 4px rgba(59,59,59,1);
+	-moz-box-shadow: 3px 1px 68px 4px rgba(59,59,59,1);
+	box-shadow: 3px 1px 68px 4px rgba(59,59,59,1);
+	height: 100%;
+	overflow: scroll;
+}
+
+.menubar {
+	opacity:0;
+}
+
+.menubar, .menu {
+	max-width: 100%;
+	display: inline-block;
+	background-color: transparent;
+}
+
+fp-postit:hover .menubar{
+	opacity: 1;
+}
+
+#delete-category {
+	max-width: 50%;
+	display: inline-block;
+	opacity: 0;
+	position:absolute;
+	top: 19px;
+	right: 20px;;
+}
+
+fp-category:hover #delete-category{
+	opacity: 1;
+}
+
+.glyphicon{
+	display: inline;
+}
+.red {
+	padding: 10px;
+	padding-top: 0px;
+	margin-bottom: 15px;
+
+	/* With help from: http://mentormate.com/blog/css-postit-note/*/
+	font-size:18px;
+	border:1px solid #E8E8E8;
+	border-bottom-right-radius: 60px 5px;
+	background: rgb(255,152,126); /* Old browsers */
+	background: -moz-linear-gradient(-45deg, rgba(255,152,126,1) 77%, rgba(255,255,214,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(77%,rgba(255,152,126,1)), color-stop(100%,rgba(255,255,214,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-45deg, rgba(255,152,126,1) 77%,rgba(255,255,214,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(-45deg, rgba(255,152,126,1) 77%,rgba(255,255,214,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(-45deg, rgba(255,152,126,1) 77%,rgba(255,255,214,1) 100%); /* IE10+ */
+	background: linear-gradient(-45deg, rgba(255,152,126,1) 77%,rgba(255,255,214,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffff88', endColorstr='#ffff88',GradientType=0 ); /* IE6-9 fallback on horizontal gradient */
+	-webkit-box-shadow: 10px 10px 5px -9px rgba(0,0,0,0.75);
+	-moz-box-shadow: 10px 10px 5px -9px rgba(0,0,0,0.75);
+	box-shadow: 10px 10px 5px -9px rgba(0,0,0,0.75);
+}
+.yellow {
+	padding: 10px;
+	padding-top: 0px;
+	margin-bottom: 15px;
+
+	/* With help from: http://mentormate.com/blog/css-postit-note/*/
+	font-size:18px;
+	border:1px solid #E8E8E8;
+	border-bottom-right-radius: 60px 5px;
+	background: rgb(255,255,136); /* Old browsers */
+	background: -moz-linear-gradient(-45deg, rgba(255,255,136,1) 77%, rgba(255,255,214,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(77%,rgba(255,255,136,1)), color-stop(100%,rgba(255,255,214,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-45deg, rgba(255,255,136,1) 77%,rgba(255,255,214,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(-45deg, rgba(255,255,136,1) 77%,rgba(255,255,214,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(-45deg, rgba(255,255,136,1) 77%,rgba(255,255,214,1) 100%); /* IE10+ */
+	background: linear-gradient(-45deg, rgba(255,255,136,1) 77%,rgba(255,255,214,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffff88', endColorstr='#ffff88',GradientType=0 ); /* IE6-9 fallback on horizontal gradient */
+	-webkit-box-shadow: 10px 10px 5px -9px rgba(0,0,0,0.75);
+	-moz-box-shadow: 10px 10px 5px -9px rgba(0,0,0,0.75);
+	box-shadow: 10px 10px 5px -9px rgba(0,0,0,0.75);
+}
+.green {
+	padding: 10px;
+	padding-top: 0px;
+	margin-bottom: 15px;
+
+	/* With help from: http://mentormate.com/blog/css-postit-note/*/
+	font-size:18px;
+	border:1px solid #E8E8E8;
+	border-bottom-right-radius: 60px 5px;
+	background: rgb(143,232,134); /* Old browsers */
+	background: -moz-linear-gradient(-45deg, rgba(143,232,134,1) 77%, rgba(255,255,214,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(77%,rgba(143,232,134,1)), color-stop(100%,rgba(255,255,214,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-45deg, rgba(143,232,134,1) 77%,rgba(255,255,214,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(-45deg, rgba(143,232,134,1) 77%,rgba(255,255,214,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(-45deg, rgba(143,232,134,1) 77%,rgba(255,255,214,1) 100%); /* IE10+ */
+	background: linear-gradient(-45deg, rgba(143,232,134,1) 77%,rgba(255,255,214,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffff88', endColorstr='#ffff88',GradientType=0 ); /* IE6-9 fallback on horizontal gradient */
+	-webkit-box-shadow: 10px 10px 5px -9px rgba(0,0,0,0.75);
+	-moz-box-shadow: 10px 10px 5px -9px rgba(0,0,0,0.75);
+	box-shadow: 10px 10px 5px -9px rgba(0,0,0,0.75);
+}
+.blue {
+	padding: 10px;
+	padding-top: 0px;
+	margin-bottom: 15px;
+
+	/* With help from: http://mentormate.com/blog/css-postit-note/*/
+	font-size:18px;
+	border:1px solid #E8E8E8;
+	border-bottom-right-radius: 60px 5px;
+	background: rgb(103,181,232); /* Old browsers */
+	background: -moz-linear-gradient(-45deg, rgba(103,181,232,1) 77%, rgba(255,255,214,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(77%,rgba(103,181,232,1)), color-stop(100%,rgba(255,255,214,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-45deg, rgba(103,181,232,1) 77%,rgba(255,255,214,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(-45deg, rgba(103,181,232,1) 77%,rgba(255,255,214,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(-45deg, rgba(103,181,232,1) 77%,rgba(255,255,214,1) 100%); /* IE10+ */
+	background: linear-gradient(-45deg, rgba(103,181,232,1) 77%,rgba(255,255,214,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffff88', endColorstr='#ffff88',GradientType=0 ); /* IE6-9 fallback on horizontal gradient */
+	-webkit-box-shadow: 10px 10px 5px -9px rgba(0,0,0,0.75);
+	-moz-box-shadow: 10px 10px 5px -9px rgba(0,0,0,0.75);
+	box-shadow: 10px 10px 5px -9px rgba(0,0,0,0.75);
+}
+
+.postit-title{
+	max-width: 100%;
+	font-size: 25px;
+	font-family:"Gloria Hallelujah", Arial, Helvetica, sans-serif;
+}
+
+.category{
+	padding: 20px;
+	padding-top: 0px;
+	font-family:"Gloria Hallelujah", Arial, Helvetica, sans-serif;
+	font-size: 30px;
+	position:relative;
+}
+
+input {
+	color: #000000;
+	outline: 0;
+	padding-left: 10px;
+	border: none;
+	background-color: transparent;
+	max-width: 90%;
+	right: 32px;
+}
+textarea {
+	color: #000000;
+	width: 100%;
+	outline: 0;
+	resize:none;
+	padding-left: 10px;
+	border: none;
+	background-color: transparent;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+fp-whiteboard {
+	display: flex;
+	margin-left: 50px;
+	margin-right: 320px;
+}
+
+fp-whiteboard>div {
+	flex: 1;
+}
+.toolbar {
+	position: fixed;
+	bottom: 20px;
+	right: 10px;
+	height: 400px;
+	width: 320px;
+	z-index: 0;
+}
+.hints {
+	width: 100%;
+}
+.tools-img {
+	width: 190px;
+	position: absolute;
+	top: 76px;
+	left: 71px;
+}
+.postit-click-area {
+	position: absolute;
+	left: 70px;
+	height: 300px;
+	width: 150px;
+	top:80px;
+	display: block;
+	/*background: red;*/
+}
+.category-click-area {
+	position: absolute;
+	left: 220px;
+	top: 80px;
+	height: 300px;
+	width: 60px;
+	/*background: blue;*/
+	display: block;
+}
+iframe, #feedly-mini {
+	display: none !important;
+}
