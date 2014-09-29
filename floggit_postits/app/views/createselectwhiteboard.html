@@ -1,19 +1,27 @@
-<div class="create-and-select-wb">
+<div class="margin">
 	<div class="page-header">
-	<h1>Welcome to Floggit postits  </h1> 
+		<h1> FLOGGIT POSTITS  </h1> 
 	</div>
+	<div class="create-select-whiteboard"
 	<div class="create-whiteboard">
-	<h2>Create new whiteboard</h2>
-		<input type="text" placeholder="Whiteboards name" class="form-control" ng-model="newWhiteboard"> 
-		<span class="input-group-btn">
-			<button class="btn btn-default" ng-click="createNewWhiteboard(newWhiteboard)">Create</button>
-		</span>
+		<h2>Create new whiteboard</h2>
+		<form>
+			<input type="text" placeholder="Whiteboards name" class="form-control" ng-model="newWhiteboard"> 
+			<span class="input-group-btn">
+				<button class="btn btn-default" ng-click="createNewWhiteboard(newWhiteboard)">Create</button>
+			</span>
+		</form>
 	</div>
 	<div class="select-whiteboard">
 		<h2> Select whiteboard </h2>
-		<input class="form-control" placeholder="Search existing whiteboard" ng-model="searchText">
+		<input type="text" class="form-control" placeholder="Search existing whiteboard" ng-model="searchText">
+		<br>
 		<div ng-repeat="board in allWhiteboards | filter:{name:searchText}">
-			<div class="wb-name" name="board.name" ng-model="whiteboard" ng-click="choosenWhiteboard(board.name)"> <span class="glyphicon glyphicon-comment"></span> {{board.name}} </div>
+			<div class="wb-name" name="board.name" ng-model="whiteboard"> 
+				<p id="board-name" ng-click="choosenWhiteboard(board.name)">{{ board.name}} </p> 
+				<span id="delete-whiteboard" class="glyphicon glyphicon-remove" ng-click="confirm(deleteWhiteboard(board.id))"></span>
+			</div>
 		</div>	
 	</div>
-</div> 
+</div>
+</div>

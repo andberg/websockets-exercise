@@ -26,7 +26,7 @@ angular.module('floggitPostitsApp')
             });
         }
         getAllData();
-        $scope.$on('new-data', getAllData);
+        $scope.$on('newData', getAllData);
       }
     };
   });

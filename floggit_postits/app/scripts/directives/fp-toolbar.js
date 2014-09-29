@@ -11,7 +11,7 @@ angular.module('floggitPostitsApp')
     return {
       templateUrl: 'views/toolbar.html',
       restrict: 'E',
-      controller: function ($scope, dataStorage, currentWhiteboard) {
+      controller: function ($scope, dataStorage, sockets, currentWhiteboard) {
         $scope.colors = currentWhiteboard.getColors();
         $scope.categories = [];
         $scope.showCategorySelectionError = false;
@@ -44,12 +44,13 @@ angular.module('floggitPostitsApp')
             };
             dataStorage.createPostit(currentWhiteboard.getName(), postit).then(function () {
               $scope.resetForm();
+              sockets.sendSocketMessage('newData');
             });
           }
         };
         $scope.createCategory = function () {
           dataStorage.createCategory(currentWhiteboard.getName());
-          dataStorage.sendSocketMessage('newData');
+          sockets.sendSocketMessage('newData');
         };
       }
     };

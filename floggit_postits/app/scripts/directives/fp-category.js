@@ -14,7 +14,7 @@ angular.module('floggitPostitsApp')
       scope: {
         category: '='
       },
-      controller: function ($scope, $route, dataStorage, currentWhiteboard) {
+      controller: function ($scope, $route, dataStorage, sockets, currentWhiteboard) {
         var name = $scope.category.name;
         var category = $scope.category;
 
@@ -27,7 +27,7 @@ angular.module('floggitPostitsApp')
             dataStorage.updateCategory(currentWhiteboard.getName(), $scope.category)
               .then(function () {
                 name = $scope.category.name;
-                dataStorage.sendSocketMessage('newData');
+                sockets.sendSocketMessage('newData');
               });
           }
         };
@@ -41,7 +41,7 @@ angular.module('floggitPostitsApp')
               }
             }
             dataStorage.deleteCategory(currentWhiteboard.getName(), $scope.category.id);
-            dataStorage.sendSocketMessage('newData');
+            sockets.sendSocketMessage('newData');
           }
         };
       }

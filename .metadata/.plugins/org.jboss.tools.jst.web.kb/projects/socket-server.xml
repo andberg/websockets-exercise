@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kb-project>
+ <depends-on-projects/>
+ <used-by-projects/>
+ <paths>
+  <path value="/Users/andreaberglund/.m2/repository/junit/junit/3.8.1/junit-3.8.1.jar"/>
+  <path value="/Users/andreaberglund/.m2/repository/javax/activation/activation/1.1/activation-1.1.jar"/>
+  <path value="/Users/andreaberglund/.m2/repository/mysql/mysql-connector-java/5.1.32/mysql-connector-java-5.1.32.jar"/>
+  <path value="/Users/andreaberglund/.m2/repository/javax/javaee-api/7.0/javaee-api-7.0.jar"/>
+  <path value="/Users/andreaberglund/.m2/repository/com/sun/mail/javax.mail/1.5.0/javax.mail-1.5.0.jar"/>
+ </paths>
+ <validation>
+  <core validator-id="jsf-verification"/>
+  <el>
+   <linked-el length="24" name="%0" offset="2199" path="%1"/>
+   <linked-el length="24" name="%0" offset="2152" path="%1"/>
+   <linked-el length="24" name="%2" offset="2199" path="%1"/>
+   <linked-el length="24" name="%3" offset="2199" path="%1"/>
+   <linked-el length="24" name="%3" offset="2152" path="%1"/>
+   <linked-el length="26" name="%4" offset="2082" path="%1"/>
+   <linked-el length="21" name="%5" offset="2339" path="%1"/>
+   <linked-el length="21" name="%6" offset="1786" path="%1"/>
+   <linked-el length="31" name="%7" offset="1950" path="%1"/>
+   <linked-el length="26" name="%8" offset="2082" path="%1"/>
+   <linked-el length="21" name="%9" offset="2339" path="%1"/>
+   <linked-el length="31" name="%9" offset="1950" path="%1"/>
+   <linked-el length="26" name="%9" offset="2082" path="%1"/>
+   <linked-el length="24" name="%10" offset="2152" path="%1"/>
+   <linked-el length="21" name="%11" offset="2339" path="%1"/>
+   <linked-el length="31" name="%12" offset="1950" path="%1"/>
+   <linked-el length="21" name="%13" offset="1786" path="%1"/>
+   <linked-el length="31" name="%14" offset="1950" path="%1"/>
+  </el>
+ </validation>
+ <aliases>
+  <alias path="maven" value="%0"/>
+  <alias path="maven.compiler.target" value="%2"/>
+  <alias path="maven.compiler" value="%3"/>
+  <alias path="version.compiler.plugin" value="%4"/>
+  <alias path="version.war.plugin" value="%5"/>
+  <alias path="project.artifactId" value="%6"/>
+  <alias path="version.wildfly" value="%7"/>
+  <alias path="version.compiler" value="%8"/>
+  <alias path="version" value="%9"/>
+  <alias path="maven.compiler.source" value="%10"/>
+  <alias path="project" value="%13"/>
+  <alias path="version.wildfly.maven.plugin" value="%12"/>
+  <alias path="version.war" value="%11"/>
+  <alias path="version.wildfly.maven" value="%14"/>
+  <alias path="/socket-server/pom.xml" value="%1"/>
+  <alias path="%0" value="maven"/>
+  <alias path="%4" value="version.compiler.plugin"/>
+  <alias path="%3" value="maven.compiler"/>
+  <alias path="%2" value="maven.compiler.target"/>
+  <alias path="%1" value="/socket-server/pom.xml"/>
+  <alias path="%7" value="version.wildfly"/>
+  <alias path="%8" value="version.compiler"/>
+  <alias path="%5" value="version.war.plugin"/>
+  <alias path="%14" value="version.wildfly.maven"/>
+  <alias path="%6" value="project.artifactId"/>
+  <alias path="%9" value="version"/>
+  <alias path="%13" value="project"/>
+  <alias path="%12" value="version.wildfly.maven.plugin"/>
+  <alias path="%11" value="version.war"/>
+  <alias path="%10" value="maven.compiler.source"/>
+ </aliases>
+ <includes/>
+ <uris/>
+</kb-project>

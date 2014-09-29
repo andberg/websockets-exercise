@@ -11,7 +11,7 @@ angular.module('floggitPostitsApp')
 		return {
 			templateUrl: 'views/createselectwhiteboard.html',
 			restrict: 'E',
-			controller: function ($scope, $http, $route, $location, currentWhiteboard, dataStorage) {
+			controller: function ($scope, $http, $route, $location, sockets, currentWhiteboard, dataStorage) {
 
 				$scope.allWhiteboards = [];
 
@@ -22,14 +22,12 @@ angular.module('floggitPostitsApp')
 				};
 				getAllWhiteboards();
 
-				$scope.$on('new-whiteboard', getAllWhiteboards);
-
 				$scope.createNewWhiteboard = function (newWhiteboard) {
 					var whiteboard = {
 						name: newWhiteboard
 					};
 					dataStorage.createWhiteboard(whiteboard).then(function () {
-						dataStorage.sendSocketMessage('newWhiteboard');
+						sockets.sendSocketMessage(whiteboard);
 						getAllWhiteboards();
 					});
 				};
@@ -39,6 +37,16 @@ angular.module('floggitPostitsApp')
 					currentWhiteboard.setName(boardName);
 					$location.path('/whiteboards/' + currentWhiteboard.getName());
 				};
+
+				$scope.deleteWhiteboard = function (boardId) {
+					var answer = confirm('Are you sure about deleting this whiteboard with all content?');
+					if (answer === true) {
+						dataStorage.deleteWhiteboard(boardId).then(function () {
+
+						});
+					}
+				};
+				$scope.$on('newWhiteboard', getAllWhiteboards);
 			}
 		};
 	});

@@ -1,0 +1,10 @@
+package se.berglund.datastorage;
+
+public class DataStorage {
+	
+	public Map<String, String> whiteboards = new Map<String, String>; 
+	
+	public DataStorage() {
+	};
+	
+}

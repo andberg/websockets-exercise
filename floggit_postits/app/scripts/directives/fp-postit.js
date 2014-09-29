@@ -14,7 +14,7 @@ angular.module('floggitPostitsApp')
       scope: {
         postit: '='
       },
-      controller: function ($scope, $route, dataStorage, currentWhiteboard) {
+      controller: function ($scope, $route, dataStorage, sockets, currentWhiteboard) {
 
         $scope.categories = currentWhiteboard.getCategories();
 
@@ -49,7 +49,7 @@ angular.module('floggitPostitsApp')
             $scope.postit.color = $scope.newColor;
             color = $scope.newColor;
             dataStorage.updatePostit(currentWhiteboard.getName(), $scope.postit);
-            dataStorage.sendSocketMessage('newData');
+            sockets.sendSocketMessage('newData');
           }
         };
 
@@ -58,7 +58,7 @@ angular.module('floggitPostitsApp')
             $scope.postit.category = $scope.newCategory.id;
             dataStorage.updatePostit(currentWhiteboard.getName(), $scope.postit).then(function () {
               category = $scope.postit.category;
-              dataStorage.sendSocketMessage('newData');
+              sockets.sendSocketMessage('newData');
             });
           }
         };
@@ -68,14 +68,14 @@ angular.module('floggitPostitsApp')
             dataStorage.updatePostit(currentWhiteboard.getName(), $scope.postit);
             title = $scope.postit.title;
             description = $scope.postit.description;
-            dataStorage.sendSocketMessage('newData');
+            sockets.sendSocketMessage('newData');
           }
         };
         $scope.deletePostit = function () {
           var answer = confirm('Are you sure that you want to delete this postit?');
           if (answer === true) {
             dataStorage.deletePostit(currentWhiteboard.getName(), $scope.postit.id).then(function () {
-              dataStorage.sendSocketMessage('newData');
+              sockets.sendSocketMessage('newData');
               $route.reload();
             });
           }

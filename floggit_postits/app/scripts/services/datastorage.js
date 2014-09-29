@@ -10,36 +10,6 @@
 angular.module('floggitPostitsApp')
   .factory('dataStorage', function ($rootScope, $http, $q) {
 
-    /* WEBSOCKETS */
-
-    var url = 'ws://localhost:8080/angular-websockets-server/whiteboards';
-    var websocket = new WebSocket(url);
-    var open = false;
-
-    websocket.onopen = function () {
-      console.log('Open');
-      open = true;
-    };
-
-    websocket.onmessage = function (response) {
-      console.log(response.data);
-      if (response.data === 'newWhiteboard') {
-        $rootScope.$broadcast('new-whiteboard', 'newWhiteboard');
-      } else if (response.data === 'newData') {
-        $rootScope.$broadcast('new-data', 'Some data');
-      }
-    };
-
-    function sendSocketMessage(message) {
-      websocket.send(message);
-    }
-
-    /*websocket.onclose = function () {
-      console.log('closed');
-      open = false;
-    };*/
-
-
     /*
      * NODE SERVER
      * options should include method, whiteboard, type
@@ -189,6 +159,10 @@ angular.module('floggitPostitsApp')
       return basicPost('whiteboards', undefined, newWhiteboard);
     }
 
+    function deleteWhiteboard(boardId) {
+      return basicDelete('whiteboards', undefined, boardId);
+    }
+
     return {
       createPostit: createPostit,
       createCategory: createCategory,
@@ -201,6 +175,6 @@ angular.module('floggitPostitsApp')
       getAll: getAll,
       createWhiteboard: createWhiteboard,
       getAllWhiteboards: getAllWhiteboards,
-      sendSocketMessage: sendSocketMessage
+      deleteWhiteboard: deleteWhiteboard
     };
   });

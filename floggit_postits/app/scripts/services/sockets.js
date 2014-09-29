@@ -10,10 +10,10 @@
 angular.module('floggitPostitsApp')
   .factory('sockets', function ($rootScope) {
 
-    /* WEBSOCKET CONNECTION */
+    /* WEBSOCKETS */
 
-    var url = 'ws://localhost:8080/angular-websockets-server/whiteboards';
-    var websocket = new WebSocket(url, ['textarea']);
+    var url = 'ws://localhost:8080//socket-server/whiteboards';
+    var websocket = new WebSocket(url);
     var open = false;
 
     websocket.onopen = function () {
@@ -22,18 +22,28 @@ angular.module('floggitPostitsApp')
     };
 
     websocket.onmessage = function (response) {
-      console.log(JSON.parse(response.data));
-      $rootScope.$broadcast('ws-message', JSON.parse(response.data).serverText);
+      console.log(response.data);
+      var jsonResponse = JSON.parse(response.data);
+      if (jsonResponse.name === 'newWhiteboard') {
+        $rootScope.$broadcast('newWhiteboard', 'newWhiteboard');
+      } else if (response.data === 'newData') {
+        $rootScope.$broadcast('newData', 'Some data');
+      }
+    };
+
+    function sendSocketMessage(type, message) {
+      if (type === 'wb') {
+
+      }
+      websocket.send(JSON.stringify(message));
+    }
+
+    websocket.onclose = function () {
+      console.log('closed');
+      open = false;
     };
 
     return {
-      send: function (text) {
-        if (open) {
-          websocket.send(JSON.stringify({
-            clientText: text
-          }));
-        }
-
-      }
+      sendSocketMessage: sendSocketMessage
     };
   });

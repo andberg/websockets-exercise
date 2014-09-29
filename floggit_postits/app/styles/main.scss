@@ -13,10 +13,31 @@ html, body, .view {
 
 // Create and Select Whiteboard 
 
+.page-header{
+	margin-left: 60px; 
+	margin-right: 60px;
+	text-align: center; 
+	background: transparent; 
+
+	background-color: rgb(0, 0, 0);
+	/* RGBa with 0.6 opacity */
+	background-color: rgba(0, 0, 0, 0.1);
+	/* For IE 5.5 - 7*/
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+	/* For IE 8*/
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	
+}
+
 h1 {
 	font-size: 50px;
 	font-family:"Gloria Hallelujah", Arial, Helvetica, sans-serif; 
 	max-width: 700px; 
+	padding: 10px; 
+	opacity: 1; 
 }
 
 h2 {
@@ -24,10 +45,14 @@ h2 {
 	font-family:"Gloria Hallelujah", Arial, Helvetica, sans-serif;
 }
 
-.create-and-select-wb {
-	margin-left: auto; 
-	margin-right: auto;
+.create-select-whiteboard {
+	display: flex; 
+	flex-direction: row; 
+	flex-flow: row wrap;
 	max-width: 900px;  
+	margin-right: 60px; 
+	margin-left: 60px; 
+
 	input {
 		outline: 1;
 		padding-left: 10px;
@@ -37,15 +62,39 @@ h2 {
 		right: 32px;
 	}
 }
+.select-whiteboard {
+	margin-right: 60px; 
+	margin-left: 60px; 
+	.form-control{
+		max-width: 300px; 
+	}
+}
 
 .wb-name{
-	padding: 9px; 
-
+	padding: 9px;
+	width: 250px; 
+	height: 205px; 
+	margin: 10px; 
+	float: left; 
+	background-image: url('../images/wb.jpg');
+	p {
+		margin-top: 4px; 
+		font-size: 30px; 
+		font-family:"Gloria Hallelujah", Arial, Helvetica, sans-serif;
+		text-align: center; 
+	}
+	#delete-whiteboard{
+		float: left; 
+		margin-top: 100px; 
+	}
+	#delete-whiteboard:hover{
+		cursor: pointer; 
+		color: red; 
+	}
 }
-.wb-name:hover {
+#board-name:hover {
 	cursor: pointer; 
-	color: white; 
-
+	color: grey; 
 }
 
 // Toolbar
