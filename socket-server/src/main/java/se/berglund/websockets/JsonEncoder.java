@@ -12,21 +12,19 @@ public class JsonEncoder implements Text<Message> {
 
 	@Override
 	public void destroy() {
-		// TODO Auto-generated method stub
-
+		System.out.println("Encoder destroyd");
 	}
 
 	@Override
 	public void init(EndpointConfig arg0) {
-		// TODO Auto-generated method stub
-
+		System.out.println("Encoder init");
 	}
 
 	@Override
 	public String encode(Message message) throws EncodeException {
 		JsonObject jsonObject = Json.createObjectBuilder()
-		        .add("subject", message.getSubject())
-		        .add("content", message.getContent()).build();
-		    return jsonObject.toString();
+				.add("type", message.getType())
+				.add("dataArray", message.getData()).build();
+		return jsonObject.toString();
 	}
 }

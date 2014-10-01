@@ -1,0 +1,10 @@
+package se.berglund.datastorage.copy;
+
+public class DataStorage {
+	
+	
+	
+	public DataStorage() {
+	};
+	
+}

@@ -1,0 +1,68 @@
+package se.berglund.datastorage;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.transaction.Transactional;
+
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.service.ServiceRegistry;
+import org.hibernate.service.ServiceRegistryBuilder;
+
+import se.berglund.models.Whiteboard;
+
+public class WhiteboardManager {
+
+	public WhiteboardManager() {
+	}
+
+	private static SessionFactory sessionFactory;
+	private static ServiceRegistry serviceRegistry;
+
+	@Transactional
+	public static ArrayList<Whiteboard> getAllWhiteboards() {
+
+		Configuration configuration = new Configuration()
+				.configure("hibernate.cfg.xml");
+		serviceRegistry = new ServiceRegistryBuilder().applySettings(
+				configuration.getProperties()).build();
+		sessionFactory = configuration.buildSessionFactory(serviceRegistry);
+		Session session = sessionFactory.openSession();
+		try {
+
+			String hql = "FROM Whiteboard";
+			Query query = session.createQuery(hql);
+			List<Whiteboard> whiteboards = query.list();
+
+			return (ArrayList<Whiteboard>) whiteboards;
+
+			return null;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return null;
+
+		} finally {
+			session.close();
+		}
+	}
+
+	public void addWhiteboard(Whiteboard whiteboard) {
+	}
+
+	public void updateWhiteboard(Whiteboard whiteboard) {
+
+	}
+
+	public void deleteWhiteboard(Whiteboard whiteboard) {
+
+	}
+
+	public void createWhiteboard(Whiteboard whiteboard) {
+
+	}
+
+}

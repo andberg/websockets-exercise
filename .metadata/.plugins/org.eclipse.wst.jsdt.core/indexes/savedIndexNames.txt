@@ -1,2 +1,7 @@
 INDEX VERSION 1.3+/Users/andreaberglund/Dropbox/C3L/Websockets/Angular-Sockets-Exercise/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+1953490745.index
+3547553974.index
+3609811745.index
+228536345.index
+4246659123.index
 2359897836.index

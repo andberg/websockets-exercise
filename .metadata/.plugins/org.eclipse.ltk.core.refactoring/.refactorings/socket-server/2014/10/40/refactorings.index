@@ -1,0 +1,5 @@
+1412146628139	Infer generic type arguments
+1412147200737	Rename type 'HIbarnateSessionFactory'
+1412147363339	Rename local variable 'sessFact'
+1412161310659	Encapsulate field 'currentWhiteboardName'
+1412161571471	Rename resource 'categories.xml'

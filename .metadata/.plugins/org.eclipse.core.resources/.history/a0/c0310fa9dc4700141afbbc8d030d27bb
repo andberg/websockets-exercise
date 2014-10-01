@@ -1,0 +1,37 @@
+package se.berglund.models;
+
+public final class Whiteboard {
+	private static int nextMember;
+	private int id;
+	private String name;
+	private Set<Postit> oistits = Set<Postit>(); 
+
+	public Whiteboard(String name) {
+		this.id = nextMember + 1;
+		this.name = name;
+	}
+
+	public Whiteboard() {
+		this.id = nextMember + 1;
+	};
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String toString(){
+		return "Whiteboard: ID: " + this.getId() + " NAME " + this.getName(); 
+	}
+}

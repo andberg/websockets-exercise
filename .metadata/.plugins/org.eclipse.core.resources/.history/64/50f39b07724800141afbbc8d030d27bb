@@ -1,0 +1,49 @@
+package se.berglund.models;
+
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Set;
+
+public final class Whiteboard {
+	private static int nextMember;
+	private static int id;
+	private String name;
+	private Set<Postit> postits = Collections.synchronizedSet(new HashSet<Postit>()); 
+
+	public Whiteboard(String name) {
+		this.id = nextMember + 1;
+		this.name = name;
+	}
+
+	public Whiteboard() {
+		this.id = nextMember + 1;
+	};
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String toString(){
+		return "Whiteboard: ID: " + this.getId() + " NAME " + this.getName(); 
+	}
+
+	public Set<Postit> getPostits() {
+		return postits;
+	}
+
+	public void setPostits(Set<Postit> postits) {
+		this.postits = postits;
+	}
+}

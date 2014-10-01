@@ -1,0 +1,16 @@
+package se.berglund.messagehandlers;
+
+public class MessageHandler {
+	private Message message; 
+	
+	private static MessageHandler instance = null; 
+	
+	private MessageHandler(){}
+	
+	public static MessageHandler getInstance(){
+		if(MessageHandler.instance == null){
+			MessageHandler.instance = new MessageHandler(); 
+		}
+		return MessageHandler.instance; 
+	}
+}

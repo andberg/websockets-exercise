@@ -5,27 +5,23 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-;
-
 @Entity
-@Table(name = "whiteboards")
+@Table(name="whiteboards")
 public final class Whiteboard {
 	@Id
-	@GeneratedValue
+	@GeneratedValue 
 	private int id;
 	private String name;
 
-	public Whiteboard() {
-
-	}
-
-	public Whiteboard(int id, String name) {
-		this.id = id;
+	public Whiteboard(String name) {
 		this.name = name;
 	}
 
+	public Whiteboard() {
+	};
+
 	public int getId() {
-		return id;
+		return id; 
 	}
 
 	public void setId(int id) {
@@ -40,4 +36,7 @@ public final class Whiteboard {
 		this.name = name;
 	}
 
+	public String toString(){
+		return "Whiteboard: ID: " + this.getId() + " NAME " + this.getName(); 
+	}
 }

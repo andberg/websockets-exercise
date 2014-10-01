@@ -1,0 +1,14 @@
+package se.berglund.datastorage;
+
+import java.util.ArrayList;
+
+import se.berglund.models.Whiteboard;
+
+public class DataStorage {
+	
+	public DataStorage() {
+	};
+	
+	public static ArrayList<Whiteboard> allWhiteboards = new ArrayList(); 
+	
+}

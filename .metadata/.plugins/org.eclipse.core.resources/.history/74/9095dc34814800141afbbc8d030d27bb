@@ -1,0 +1,48 @@
+package se.berglund.websockets;
+
+import javax.json.JsonArray;
+import javax.websocket.CloseReason;
+import javax.websocket.OnClose;
+import javax.websocket.OnError;
+import javax.websocket.OnMessage;
+import javax.websocket.OnOpen;
+import javax.websocket.Session;
+import javax.websocket.server.ServerEndpoint;
+
+import se.berglund.datastorage.DataStorage;
+import se.berglund.messagehandlers.MessageHandler;
+import se.berglund.models.Message;
+
+@ServerEndpoint(value = "/whiteboards", encoders = { JsonEncoder.class }, decoders = { JsonDecoder.class })
+public class WhiteboardSocket {
+
+	@OnOpen
+	public void myOnOpen(Session session) {
+		System.out.println("WhiteboardSocket connected, session id: "
+				+ session.getId().toString());
+	}
+
+	@OnMessage
+	public void myOnMessage(Session session, Message message) {
+		System.out.println("Whiteboard Message recived " + message.toString());
+		MessageHandler messageHandler = MessageHandler.getInstance(); 
+		Message handeldMessage = MessageHandler.handleMessage(message); 
+
+		
+		for (Session s : session.getOpenSessions()) {
+			if (s.isOpen()) {
+				s.getAsyncRemote().sendObject(message);
+			}
+		}
+	}
+
+	@OnClose
+	public void myOnClose(Session session, CloseReason reason) {
+		System.out.println("WhiteboardSocket closed");
+	}
+
+	@OnError
+	public void myOnError(Session session, Throwable throwable) {
+		throwable.printStackTrace();
+	}
+}

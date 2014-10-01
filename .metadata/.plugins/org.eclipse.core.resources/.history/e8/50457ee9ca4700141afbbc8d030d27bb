@@ -1,0 +1,32 @@
+package se.berglund.datastorage;
+
+import java.util.ArrayList;
+
+import se.berglund.models.Whiteboard;
+
+public class DataStorage {
+
+	public DataStorage() {
+	};
+
+	private static ArrayList<Whiteboard> allWhiteboards = new ArrayList<Whiteboard>();
+
+	public ArrayList<Whiteboard> getAllWhiteboards() {
+		return allWhiteboards;
+	}
+
+	public void addToWhiteboard(Whiteboard whiteboard) {
+		allWhiteboards.add(whiteboard);
+	}
+
+	public void deleteFromWhiteboard(Whiteboard whiteboard) {
+		allWhiteboards.remove(whiteboard.getId());
+	}
+
+	public void updateWhiteboard(Whiteboard whiteboard) {
+		Whiteboard oldWhiteboard = allWhiteboards.get(whiteboard.getId());
+		oldWhiteboard.setName(whiteboard.getName());
+		allWhiteboards.add(oldWhiteboard); 
+	}
+
+}

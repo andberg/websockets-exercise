@@ -1,0 +1,44 @@
+package se.berglund.messagehandlers;
+
+import java.util.ArrayList;
+
+import javax.json.Json;
+import javax.json.JsonArray;
+import javax.json.JsonArrayBuilder;
+import javax.json.JsonObject;
+import javax.json.JsonValue;
+
+import se.berglund.datastorage.WhiteboardManager;
+import se.berglund.models.Message;
+import se.berglund.models.Whiteboard;
+
+public class MessageHandler {
+	private Message message; 
+	
+	public MessageHandler(Message message){
+		this.message = message; 
+	}
+		
+	public Message handleMessage(){
+		Message message = new Message();
+		if ((this.message.getType()).contains("get-all-whiteboards")) {
+			ArrayList<Whiteboard> allWhiteboards = WhiteboardManager.getAllWhiteboards(); 
+			JsonArray allWhiteboardsToJson = parseArrayToJsonArray(allWhiteboards); 
+			message.setType("get-all-whiteboards");
+			message.setData(allWhiteboardsToJson); 
+		}
+		return message;
+	}
+	
+	protected JsonArray parseArrayToJsonArray(ArrayList<Whiteboard> whiteboards){
+		
+		JsonArrayBuilder jsonArrayBuilder = Json.createArrayBuilder();
+		
+		for(Whiteboard wb: whiteboards){
+			JsonObject whiteboard = Json.createObjectBuilder().add("id", "name").add(Integer.toString(wb.getId()), wb.getName()).build(); 
+			jsonArray.add(whiteboard);  
+		}
+		JsonArray jsonArray = jsonArrayBuilder.build(); 
+		return jsonArray; 
+	}
+}

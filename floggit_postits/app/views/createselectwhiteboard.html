@@ -19,7 +19,7 @@
 		<div ng-repeat="board in allWhiteboards | filter:{name:searchText}">
 			<div class="wb-name" name="board.name" ng-model="whiteboard"> 
 				<p id="board-name" ng-click="choosenWhiteboard(board.name)">{{ board.name}} </p> 
-				<span id="delete-whiteboard" class="glyphicon glyphicon-remove" ng-click="confirm(deleteWhiteboard(board.id))"></span>
+				<span id="delete-whiteboard" class="glyphicon glyphicon-remove" ng-click="confirm(deleteWhiteboard(board.name))"></span>
 			</div>
 		</div>	
 	</div>

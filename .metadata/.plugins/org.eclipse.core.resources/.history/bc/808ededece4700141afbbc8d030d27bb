@@ -1,0 +1,34 @@
+package se.berglund.datastorage;
+
+import java.util.ArrayList;
+
+import javax.json.Json;
+import javax.json.JsonArray;
+
+import se.berglund.models.Whiteboard;
+
+public class DataStorage {
+
+	private static JsonArray allWhiteboards;
+
+	public static JsonArray getAllWhiteboards() {
+		System.out.println("In get all WB"); 
+		return allWhiteboards;
+
+	}
+
+	public static void addToWhiteboard(Whiteboard whiteboard) {
+		allWhiteboards.addAll(whiteboard);
+	}
+
+	public static void deleteFromWhiteboard(Whiteboard whiteboard) {
+		allWhiteboards.remove(whiteboard.getId());
+	}
+
+	public static void updateWhiteboard(Whiteboard whiteboard) {
+		Whiteboard oldWhiteboard = allWhiteboards.get(whiteboard.getId());
+		oldWhiteboard.setName(whiteboard.getName());
+		allWhiteboards.add(oldWhiteboard);
+	}
+
+}

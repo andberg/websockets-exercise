@@ -16,37 +16,37 @@ angular.module('floggitPostitsApp')
 				$scope.allWhiteboards = [];
 
 				var getAllWhiteboards = function () {
-					dataStorage.getAllWhiteboards().then(function (data) {
-						$scope.allWhiteboards = data;
-					});
+					$scope.allWhiteboards = dataStorage.getAllWhiteboards();
 				};
-				getAllWhiteboards();
 
 				$scope.createNewWhiteboard = function (newWhiteboard) {
 					var whiteboard = {
 						name: newWhiteboard
 					};
-					dataStorage.createWhiteboard(whiteboard).then(function () {
-						sockets.sendSocketMessage(whiteboard);
-						getAllWhiteboards();
-					});
+					dataStorage.createWhiteboard(whiteboard);
 				};
 
 				$scope.choosenWhiteboard = function (boardName) {
-					console.log(boardName);
 					currentWhiteboard.setName(boardName);
 					$location.path('/whiteboards/' + currentWhiteboard.getName());
 				};
 
-				$scope.deleteWhiteboard = function (boardId) {
+				$scope.deleteWhiteboard = function (boardName) {
 					var answer = confirm('Are you sure about deleting this whiteboard with all content?');
 					if (answer === true) {
-						dataStorage.deleteWhiteboard(boardId).then(function () {
-
-						});
+						var whiteboard = {
+							name: boardName
+						};
+						dataStorage.deleteWhiteboard(whiteboard);
 					}
 				};
-				$scope.$on('newWhiteboard', getAllWhiteboards);
+				$scope.$on('websocket-open', getAllWhiteboards);
+				$scope.$on('create-delete-whiteboard', getAllWhiteboards);
+				$scope.$on('get-all-whiteboards', function (event, data) {
+					console.log(data);
+					$scope.allWhiteboards = data;
+					$scope.$apply();
+				});
 			}
 		};
 	});

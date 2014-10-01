@@ -1,0 +1,66 @@
+package se.berglund.datastorage;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.transaction.Transactional;
+
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+
+import se.berglund.models.Whiteboard;
+
+public class WhiteboardManager {
+
+	public WhiteboardManager() {
+	}
+
+	@Transactional
+	public static ArrayList<Whiteboard> getAllWhiteboards() {
+
+		SessionFactory sessFactory = HibernateSessionFactory
+				.getSessionFactory();
+		Session session = sessFactory.openSession();
+		Transaction tr = session.beginTransaction();
+
+		String strSql = "from Whiteboard w";
+		Query query = session.createQuery(strSql);
+		List whiteboards = query.list();
+
+		tr.commit();
+		System.out.println("Data displayed");
+		
+		return (ArrayList<Whiteboard>) whiteboards;
+	}
+
+	public void addWhiteboard(Whiteboard whiteboard) {
+		SessionFactory sessFactory = HibernateSessionFactory
+				.getSessionFactory();
+		Session session = sessFactory.openSession();
+		Transaction tr = session.beginTransaction();
+
+		String strSql = "from Whiteboard w";
+		Query query = session.createQuery(strSql);
+		List whiteboards = query.list();
+
+		tr.commit();
+		System.out.println("Data displayed");
+		
+		
+	}
+
+	public void updateWhiteboard(Whiteboard whiteboard) {
+
+	}
+
+	public void deleteWhiteboard(Whiteboard whiteboard) {
+
+	}
+
+	public void createWhiteboard(Whiteboard whiteboard) {
+
+	}
+
+}

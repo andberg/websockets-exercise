@@ -1,0 +1,12 @@
+1411978463898	Encapsulate field 'type'
+1411978472289	Encapsulate field 'data'
+1411983179063	Copy package
+1411983186285	Delete element
+1411997384425	Encapsulate field 'postits'
+1412067869291	Encapsulate field 'allWhiteboards'
+1412068021121	Delete element
+1412069472882	Delete element
+1412072999887	Rename resource 'whiteboards.xml'
+1412076679612	Move 1 resources to 'resources'
+1412077039672	Move 1 resources to 'hibernate'
+1412078140665	Move 1 resources to 'resources'

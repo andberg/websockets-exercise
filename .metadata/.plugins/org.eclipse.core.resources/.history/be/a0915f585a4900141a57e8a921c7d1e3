@@ -1,0 +1,10 @@
+package se.berglund.datastorage;
+
+public class CurrentWhiteboardManager {
+	
+	private String currentWhiteboardName; 
+	
+	public CurrentWhiteboardManager(){}
+	
+	
+}

@@ -1,0 +1,19 @@
+package se.berglund.messagehandlers;
+
+import se.berglund.models.Message;
+
+public class MessageHandler {
+
+	private Message message; 
+	private static MessageHandler instance = null; 
+	
+	private MessageHandler(){
+	}
+	
+	public static MessageHandler getInstance(Message message){
+		if(MessageHandler.instance == null){
+			MessageHandler.instance = new MessageHandler();
+		}
+		return MessageHandler.instance; 
+	}
+}

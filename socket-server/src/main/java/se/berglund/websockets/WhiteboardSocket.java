@@ -8,6 +8,7 @@ import javax.websocket.OnOpen;
 import javax.websocket.Session;
 import javax.websocket.server.ServerEndpoint;
 
+import se.berglund.messagehandlers.MessageHandler;
 import se.berglund.models.Message;
 
 @ServerEndpoint(value = "/whiteboards", encoders = { JsonEncoder.class }, decoders = { JsonDecoder.class })
@@ -15,33 +16,30 @@ public class WhiteboardSocket {
 
 	@OnOpen
 	public void myOnOpen(Session session) {
-		System.out.println("Angular WhiteboardSocket connected, session id: "
+		System.out.println("WhiteboardSocket connected, session id: "
 				+ session.getId().toString());
 	}
 
 	@OnMessage
 	public void myOnMessage(Session session, Message message) {
-
-		System.out.println("Message recived " + message.toString());
+		System.out.println(message.getData()); 
+		MessageHandler messageHandler = new MessageHandler(message); 
+		Message handeldMessage = messageHandler.handleMessage(); 
 		
-		/*Message response = new Message();
-		response.setSubject("Response to " + message.getSubject());
-		response.setContent("echo " + message.getContent());*/
-
 		for (Session s : session.getOpenSessions()) {
 			if (s.isOpen()) {
-				s.getAsyncRemote().sendObject(message);
+				s.getAsyncRemote().sendObject(handeldMessage);
 			}
 		}
 	}
 
 	@OnClose
 	public void myOnClose(Session session, CloseReason reason) {
-		System.out.println("Angular WhiteboardSocket closed");
+		System.out.println("WhiteboardSocket closed");
 	}
 
 	@OnError
 	public void myOnError(Session session, Throwable throwable) {
-		System.out.println("Angular WhiteboardSocket Error");
+		throwable.printStackTrace();
 	}
 }

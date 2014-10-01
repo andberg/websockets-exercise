@@ -1,0 +1,32 @@
+package se.berglund.models;
+
+import javax.json.JsonArray;
+
+public class Message {
+	private String type;
+	private JsonArray data;
+	
+	public Message(){
+	}; 
+	
+	public Message(type, data){
+		this.type = type; 
+		this.data = data; 
+	}
+	
+	public String getType() {
+		return type;
+	}
+	public void setType(String type) {
+		this.type = type;
+	}
+	
+	public JsonArray getData() {
+		return data;
+	}
+	public void setData(JsonArray data) {
+		this.data = data;
+	} 
+
+
+}

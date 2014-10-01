@@ -8,9 +8,9 @@
  * Factory in the floggitPostitsApp.
  */
 angular.module('floggitPostitsApp')
-  .factory('sockets', function ($rootScope) {
+  .factory('sockets', function () {
 
-    /* WEBSOCKETS */
+    /* WEBSOCKETS 
 
     var url = 'ws://localhost:8080//socket-server/whiteboards';
     var websocket = new WebSocket(url);
@@ -31,7 +31,7 @@ angular.module('floggitPostitsApp')
       }
     };
 
-    function sendSocketMessage(type, message) {
+    function sendSocketMessage(message) {
       if (type === 'wb') {
 
       }
@@ -45,5 +45,5 @@ angular.module('floggitPostitsApp')
 
     return {
       sendSocketMessage: sendSocketMessage
-    };
+    };*/
   });

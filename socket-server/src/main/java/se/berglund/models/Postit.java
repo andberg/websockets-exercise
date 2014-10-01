@@ -17,9 +17,7 @@ public final class Postit {
 	private String name; 
 	private String content;
 	
-	public Postit(){
-		
-	}
+	public Postit(){}
 	
 	public Postit (int id, int categoryId, String name, String content){
 		this.id = id; 

@@ -1,0 +1,37 @@
+package se.berglund.messagehandlers;
+
+import javax.json.JsonArray;
+
+import se.berglund.datastorage.DataStorage;
+import se.berglund.models.Message;
+
+public class MessageHandler {
+
+	private static Message message; 
+	private static MessageHandler instance = null; 
+	
+	private MessageHandler(){
+	}
+	
+	public static MessageHandler getInstance(){
+		if(MessageHandler.instance == null){
+			MessageHandler.instance = new MessageHandler();
+		}
+		return MessageHandler.instance; 
+	}
+	
+	private static void addMessage(Message message){
+		MessageHandler.message = message; 
+	}
+	
+	public static Message handleMessage(Message message){
+		addMessage(message); 
+		if ((message.getType()).contains("get-all-whiteboards")) {
+			JsonArray allwhiteboards = DataStorage.getAllWhiteboards();
+			if(allwhiteboards != null){
+				message.setData(allwhiteboards); 
+			}
+		}
+		return message;
+	}
+}

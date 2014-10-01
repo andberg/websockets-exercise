@@ -10,77 +10,44 @@
 angular.module('floggitPostitsApp')
   .factory('dataStorage', function ($rootScope, $http, $q) {
 
-    /*
-     * NODE SERVER
-     * options should include method, whiteboard, type
-     * options could include  id, data
-     */
+    var url = 'ws://localhost:8080/socket-server/whiteboards';
+    var websocket = new WebSocket(url);
+    var open = false;
 
-    var baseUrl = 'http://localhost:14782/fp-';
+    websocket.onopen = function () {
+      console.log('Open');
+      open = true;
+      $rootScope.$broadcast('websocket-open');
+    };
 
-    function basicRequest(options) {
-      var deferred = $q.defer();
-      var url;
-
-      if (options.whiteboard === 'whiteboards') {
-        url = baseUrl + options.whiteboard;
-      } else {
-        url = baseUrl + options.whiteboard + '-' + options.type;
+    websocket.onmessage = function (response) {
+      console.log(response.data);
+      var jsonResponse = JSON.parse(response.data);
+      if (jsonResponse.type === 'get-all-whiteboards') {
+        $rootScope.$broadcast('get-all-whiteboards', jsonResponse.dataArray);
+      }
+      if (jsonResponse.type === 'create-whiteboard' || jsonResponse.type === 'delete-whiteboard') {
+        $rootScope.$broadcast('create-delete-whiteboard');
       }
 
-      var requestParams = {};
-      if (options.id !== undefined) {
-        url = url + '/' + options.id;
+    };
+
+    function sendSocketMessage(type, data) {
+      var message = {
+        type: type,
+        dataArray: [data]
+      };
+      console.log(message);
+      if (open) {
+        websocket.send(JSON.stringify(message));
       }
-      requestParams.method = options.method;
 
-      requestParams.url = url;
-      if (options.data !== undefined) {
-        requestParams.data = options.data;
-      }
-      console.log(options.method + ' ' + url);
-      $http(requestParams).success(function (data) {
-        deferred.resolve(data);
-      });
-      return deferred.promise;
     }
 
-    function basicGet(whiteboard, type, id) {
-      return basicRequest({
-        method: 'GET',
-        whiteboard: whiteboard,
-        type: type,
-        id: id
-      });
-    }
-
-    function basicPost(whiteboard, type, data) {
-      return basicRequest({
-        method: 'POST',
-        whiteboard: whiteboard,
-        type: type,
-        data: data
-      });
-    }
-
-    function basicPut(whiteboard, type, data, id) {
-      return basicRequest({
-        method: 'PUT',
-        whiteboard: whiteboard,
-        type: type,
-        data: data,
-        id: id
-      });
-    }
-
-    function basicDelete(whiteboard, type, id) {
-      return basicRequest({
-        method: 'DELETE',
-        whiteboard: whiteboard,
-        type: type,
-        id: id
-      });
-    }
+    websocket.onclose = function () {
+      console.log('closed');
+      open = false;
+    };
 
     function createPostit(whiteboard, postit) {
       return basicPost(whiteboard, 'postits', postit);
@@ -142,25 +109,33 @@ angular.module('floggitPostitsApp')
     }
 
     function getAll(whiteboard) {
-      return $q.all([
+      var currentWhiteboard = {
+        name: whiteboard
+      };
+      return sendSocketMessage('get-current-whiteboard', currentWhiteboard);
+      /*$q.all([
           getAllCategoriesFor(whiteboard), // res[0] === categories
           getAllPostitsFor(whiteboard) // res[1] === postits
         ])
         .then(function (res) {
           return sortPostitsIntoCategories(res[0], res[1]);
-        });
+        });*/
     }
 
     function getAllWhiteboards() {
-      return basicGet('whiteboards', undefined);
+      var dummyData = {
+        data: 'data'
+      };
+      var response = sendSocketMessage('get-all-whiteboards', dummyData);
+      return response;
     }
 
     function createWhiteboard(newWhiteboard) {
-      return basicPost('whiteboards', undefined, newWhiteboard);
+      return sendSocketMessage('create-whiteboard', newWhiteboard);
     }
 
-    function deleteWhiteboard(boardId) {
-      return basicDelete('whiteboards', undefined, boardId);
+    function deleteWhiteboard(boardName) {
+      return sendSocketMessage('delete-whiteboard', boardName);
     }
 
     return {
@@ -175,6 +150,6 @@ angular.module('floggitPostitsApp')
       getAll: getAll,
       createWhiteboard: createWhiteboard,
       getAllWhiteboards: getAllWhiteboards,
-      deleteWhiteboard: deleteWhiteboard
+      deleteWhiteboard: deleteWhiteboard,
     };
   });
