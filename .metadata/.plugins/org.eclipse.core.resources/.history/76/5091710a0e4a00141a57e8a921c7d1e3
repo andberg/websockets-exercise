@@ -1,0 +1,59 @@
+package se.berglund.datastorage;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+
+import se.berglund.models.Postit;
+
+public class CurrentWhiteboardManager {
+
+	// THREAD SECURITY for maps
+
+	private int currentWhiteboardId;
+
+	public CurrentWhiteboardManager() {
+	}
+
+	public CurrentWhiteboardManager(int id) {
+		this.setCurrentWhiteboardId(id);
+	}
+
+	public int getCurrentWhiteboardId() {
+		return currentWhiteboardId;
+	}
+
+	public void setCurrentWhiteboardId(int currentWhiteboardId) {
+		this.currentWhiteboardId = currentWhiteboardId;
+	}
+
+	public Map<String, Postit> getAllForCurrentWhiteboard() {
+		Map<String, Postit> categoriesWithPostits = new HashMap<String, Postit>();
+
+		// Get all categories from DB fro current whiteboard
+		SessionFactory sessFactory = HibernateSessionFactory
+				.getSessionFactory();
+		Session session = sessFactory.openSession();
+		Transaction tr = session.beginTransaction();
+		
+		Query query = session.createQuery("from Category c WHERE whiteboard_id = :id ");
+		query.setParameter("id", currentWhiteboardId);
+		
+		ArrayList categories = (ArrayList) query.list();
+		
+		
+
+		// Get all postits from DB
+
+		tr.commit();
+
+		return categoriesWithPostits;
+
+	}
+}

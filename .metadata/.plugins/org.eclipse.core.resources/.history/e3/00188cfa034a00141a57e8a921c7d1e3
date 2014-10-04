@@ -1,0 +1,28 @@
+package se.berglund.datastorage;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import se.berglund.models.Postit;
+
+public class CurrentWhiteboardManager {
+	
+	// THREAD SECURITY for maps
+	
+	private String currentWhiteboardName; 
+	private Map<String, Postit> categoriesWithPostits = new HashMap<String, Postit>(); 
+	
+	public CurrentWhiteboardManager(){}
+	
+	public CurrentWhiteboardManager(String name){
+		this.currentWhiteboardName = name; 
+	}
+
+	public String getCurrentWhiteboardName() {
+		return currentWhiteboardName;
+	}
+
+	public void setCurrentWhiteboardName(String currentWhiteboardName) {
+		this.currentWhiteboardName = currentWhiteboardName;
+	}
+}

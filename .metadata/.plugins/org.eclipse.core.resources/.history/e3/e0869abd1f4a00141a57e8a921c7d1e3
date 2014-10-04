@@ -1,0 +1,74 @@
+package se.berglund.datastorage;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+
+import se.berglund.models.Category;
+import se.berglund.models.Postit;
+
+public class CurrentWhiteboardManager {
+
+	// THREAD SECURITY for maps
+
+	private int currentWhiteboardId;
+
+	public CurrentWhiteboardManager() {
+	}
+
+	public CurrentWhiteboardManager(int id) {
+		this.setCurrentWhiteboardId(id);
+	}
+
+	public int getCurrentWhiteboardId() {
+		return currentWhiteboardId;
+	}
+
+	public void setCurrentWhiteboardId(int currentWhiteboardId) {
+		this.currentWhiteboardId = currentWhiteboardId;
+	}
+
+	public Map<Category, Postit> getAllForCurrentWhiteboard() {
+		Map<Category, Postit> categoriesWithPostits = new HashMap<String, Postit>();
+
+		// Get all categories from DB fro current whiteboard
+		SessionFactory sessFactory = HibernateSessionFactory
+				.getSessionFactory();
+		Session session = sessFactory.openSession();
+		Transaction tr = session.beginTransaction();
+		
+		Query query = session.createQuery("from Category c WHERE whiteboardId = :id ");
+		query.setParameter("id", currentWhiteboardId);
+		
+		@SuppressWarnings("unchecked")
+		ArrayList<Category> categories = (ArrayList<Category>) query.list();
+		tr.commit();
+		
+		// Get all postits from DB
+
+		Session postitSession = sessFactory.openSession();
+		Transaction postitTr = postitSession.beginTransaction();
+		
+		Query postitQuery = postitSession.createQuery("from Postit p WHERE whiteboardId = :id ");
+		postitQuery.setParameter("id", currentWhiteboardId);
+		
+		@SuppressWarnings("unchecked")
+		ArrayList<Postit> postits = (ArrayList<Postit>) postitQuery.list();
+
+		categoriesWithPostits = sortPostitsIntoCategories(categories, postits); 
+
+		return categoriesWithPostits;
+
+	}
+	
+	private Map sortPostitsIntoCategories(ArrayList<Category> categories, ArrayList<Postit> postits){
+		
+		return null; 
+	}
+}

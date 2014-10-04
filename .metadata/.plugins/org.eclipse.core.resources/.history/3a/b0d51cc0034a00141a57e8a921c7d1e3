@@ -1,0 +1,23 @@
+package se.berglund.datastorage;
+
+public class CurrentWhiteboardManager {
+	
+	// THREAD SECURITY
+	
+	private String currentWhiteboardName; 
+	private List<Category> categoriesWithPostits Map/List 
+	
+	public CurrentWhiteboardManager(){}
+	
+	public CurrentWhiteboardManager(String name){
+		this.currentWhiteboardName = name; 
+	}
+
+	public String getCurrentWhiteboardName() {
+		return currentWhiteboardName;
+	}
+
+	public void setCurrentWhiteboardName(String currentWhiteboardName) {
+		this.currentWhiteboardName = currentWhiteboardName;
+	}
+}

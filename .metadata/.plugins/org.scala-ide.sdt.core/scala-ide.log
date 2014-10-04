@@ -46,3 +46,58 @@ INFO: XNIO version 3.2.0.Final
 INFO: XNIO NIO Implementation Version 3.2.0.Final
 2014-10-01 11:47:55,294 ERROR [Worker-73] - System.err - Oct 01, 2014 11:47:55 AM org.jboss.remoting3.EndpointImpl <clinit>
 INFO: JBoss Remoting version (unknown)
+2014-10-02 12:28:31,067 ERROR [main] - org.scala-ide.sdt.core - org.scala-ide.sdt.core - org.scala-ide.sdt.core - 0 - Error during askOption
+java.lang.InterruptedException
+	at java.lang.Object.wait(Native Method)
+	at scala.tools.nsc.interactive.Response.get(Response.scala:74)
+	at scala.tools.eclipse.ScalaPresentationCompiler.askOption(ScalaPresentationCompiler.scala:146)
+	at scala.tools.eclipse.ScalaPresentationCompiler.askOption(ScalaPresentationCompiler.scala:137)
+	at scala.tools.eclipse.ScalaProject$$anon$1.create(ScalaProject.scala:102)
+	at scala.tools.eclipse.ScalaProject$$anon$1.create(ScalaProject.scala:95)
+	at scala.tools.eclipse.util.Cached$class.apply(Cached.scala:30)
+	at scala.tools.eclipse.ScalaProject$$anon$1.apply(ScalaProject.scala:95)
+	at scala.tools.eclipse.ScalaProject.withPresentationCompiler(ScalaProject.scala:594)
+	at scala.tools.eclipse.ScalaProject.withSourceFile(ScalaProject.scala:603)
+	at scala.tools.eclipse.InteractiveCompilationUnit$class.withSourceFile(InteractiveCompilationUnit.scala:66)
+	at scala.tools.eclipse.javaelements.ScalaClassFile.withSourceFile(ScalaClassFile.scala:22)
+	at scala.tools.eclipse.javaelements.ScalaCompilationUnit$class.buildStructure(ScalaCompilationUnit.scala:110)
+	at scala.tools.eclipse.javaelements.ScalaClassFile.buildStructure(ScalaClassFile.scala:22)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:258)
+	at org.eclipse.jdt.internal.core.SourceRefElement.generateInfos(SourceRefElement.java:107)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:521)
+	at org.eclipse.jdt.internal.core.BinaryType.getElementInfo(BinaryType.java:286)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:244)
+	at org.eclipse.jdt.internal.core.BinaryType.getFlags(BinaryType.java:318)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementImageProvider.getBaseImageDescriptor(JavaElementImageProvider.java:236)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementImageProvider.getJavaImageDescriptor(JavaElementImageProvider.java:162)
+	at org.eclipse.jdt.internal.ui.viewsupport.ImagesOnFileSystemRegistry.getImageURL(ImagesOnFileSystemRegistry.java:82)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getImageURL(JavadocHover.java:764)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getImageAndLabel(JavadocHover.java:919)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getInfoText(JavadocHover.java:759)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo(JavadocHover.java:688)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.internalGetHoverInfo(JavadocHover.java:612)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo2(JavadocHover.java:604)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:129)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:85)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+2014-10-02 12:57:56,296 ERROR [Remoting "endpoint" I/O-1] - System.err - Oct 02, 2014 12:57:56 PM org.jboss.remoting3.remote.RemoteConnection handleException
+ERROR: JBREM000200: Remote connection failed: java.io.IOException: Connection reset by peer
+2014-10-02 12:59:43,429 ERROR [Worker-14] - System.err - Oct 02, 2014 12:59:43 PM org.xnio.Xnio <clinit>
+INFO: XNIO version 3.1.0.Final
+2014-10-02 12:59:43,444 ERROR [Worker-14] - System.err - Oct 02, 2014 12:59:43 PM org.xnio.nio.NioXnio <clinit>
+INFO: XNIO NIO Implementation Version 3.1.0.Final
+2014-10-02 12:59:43,470 ERROR [Worker-14] - System.err - Oct 02, 2014 12:59:43 PM org.jboss.remoting3.EndpointImpl <clinit>
+INFO: JBoss Remoting version 4.0.0.Beta1
+2014-10-04 16:25:32,676 ERROR [Worker-9] - System.err - Oct 04, 2014 4:25:32 PM org.xnio.Xnio <clinit>
+INFO: XNIO version 3.1.0.Final
+2014-10-04 16:25:32,691 ERROR [Worker-9] - System.err - Oct 04, 2014 4:25:32 PM org.xnio.nio.NioXnio <clinit>
+INFO: XNIO NIO Implementation Version 3.1.0.Final
+2014-10-04 16:25:32,711 ERROR [Worker-9] - System.err - Oct 04, 2014 4:25:32 PM org.jboss.remoting3.EndpointImpl <clinit>
+INFO: JBoss Remoting version 4.0.0.Beta1
+2014-10-04 16:26:10,148 ERROR [Worker-0] - System.err - Oct 04, 2014 4:26:10 PM org.xnio.Xnio <clinit>
+INFO: XNIO version 3.2.0.Final
+2014-10-04 16:26:10,183 ERROR [Worker-0] - System.err - Oct 04, 2014 4:26:10 PM org.xnio.nio.NioXnio <clinit>
+INFO: XNIO NIO Implementation Version 3.2.0.Final
+2014-10-04 16:26:10,246 ERROR [Worker-0] - System.err - Oct 04, 2014 4:26:10 PM org.jboss.remoting3.EndpointImpl <clinit>
+INFO: JBoss Remoting version (unknown)

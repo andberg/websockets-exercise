@@ -2,13 +2,10 @@
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="se.berglund.datastorage.DataStorage"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="se.berglund.models.Whiteboard"/>
 <fullyQualifiedTypeName name="javax.json.JsonArray"/>
 <fullyQualifiedTypeName name="java.util.Set"/>
-<fullyQualifiedTypeName name="se.berglund.models.Message"/>
 <fullyQualifiedTypeName name="se.berglund.messagehandlers.MessageHandler"/>
-<fullyQualifiedTypeName name="se.berglund.datastorage.WhiteboardManager"/>
 <fullyQualifiedTypeName name="java.util.Collections"/>
 <fullyQualifiedTypeName name="org.hibernate.SessionFactory"/>
 <fullyQualifiedTypeName name="javax.json.JsonReader"/>
@@ -23,5 +20,14 @@
 <fullyQualifiedTypeName name="org.hibernate.cfg.Configuration"/>
 <fullyQualifiedTypeName name="org.hibernate.Transaction"/>
 <fullyQualifiedTypeName name="javax.json.JsonObject"/>
+<fullyQualifiedTypeName name="se.berglund.datastorage.WhiteboardManager"/>
+<fullyQualifiedTypeName name="se.berglund.models.Message"/>
+<fullyQualifiedTypeName name="se.berglund.datastorage.CurrentWhiteboardManager"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="se.berglund.models.Category"/>
+<fullyQualifiedTypeName name="se.berglund.models.Postit"/>
 <fullyQualifiedTypeName name="javax.json.JsonArrayBuilder"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
 </qualifiedTypeNameHistroy>

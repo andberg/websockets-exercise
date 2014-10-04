@@ -11,7 +11,9 @@
          <generator class="native"/>
       </id>
       <property name="categoryId" column="category_id" type="int"/>
-      <property name="name" column="name" type="string"/>
-      <property name="content" column="content" type="string"/>
+      <property name="whiteboardId" column="whiteboard_id" type="int"/>
+      <property name="title" column="name" type="string"/>
+      <property name="description" column="content" type="string"/>
+      <property name="color" column="color" type="string"/>
    </class>
 </hibernate-mapping>

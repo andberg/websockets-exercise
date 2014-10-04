@@ -19,14 +19,14 @@ angular.module('floggitPostitsApp')
         $scope.name = currentWhiteboard.getName();
 
         function getAllData() {
-          dataStorage.getAll($scope.name)
-            .then(function (data) {
-              currentWhiteboard.setCategories(data);
-              $scope.categories = currentWhiteboard.getCategories();
-            });
+          dataStorage.getAll(currentWhiteboard.getId());
         }
         getAllData();
-        $scope.$on('newData', getAllData);
+        $scope.$on('get-current-whiteboard', function (event, data) {
+          console.log(data);
+          currentWhiteboard.setCategories(data);
+          $scope.$apply();
+        });
       }
     };
   });

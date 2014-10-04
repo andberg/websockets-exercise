@@ -11,7 +11,7 @@ angular.module('floggitPostitsApp')
 		return {
 			templateUrl: 'views/createselectwhiteboard.html',
 			restrict: 'E',
-			controller: function ($scope, $http, $route, $location, sockets, currentWhiteboard, dataStorage) {
+			controller: function ($scope, $route, $location, sockets, currentWhiteboard, dataStorage) {
 
 				$scope.allWhiteboards = [];
 
@@ -26,16 +26,17 @@ angular.module('floggitPostitsApp')
 					dataStorage.createWhiteboard(whiteboard);
 				};
 
-				$scope.choosenWhiteboard = function (boardName) {
+				$scope.choosenWhiteboard = function (id, boardName) {
 					currentWhiteboard.setName(boardName);
+					currentWhiteboard.setId(id);
 					$location.path('/whiteboards/' + currentWhiteboard.getName());
 				};
 
-				$scope.deleteWhiteboard = function (boardName) {
+				$scope.deleteWhiteboard = function (id) {
 					var answer = confirm('Are you sure about deleting this whiteboard with all content?');
 					if (answer === true) {
 						var whiteboard = {
-							name: boardName
+							id: id
 						};
 						dataStorage.deleteWhiteboard(whiteboard);
 					}

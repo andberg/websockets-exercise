@@ -11,7 +11,7 @@ angular.module('floggitPostitsApp')
   .factory('currentWhiteboard', function () {
     // Service logic
     // ...
-
+    var whiteboardId;
     var whiteboardName = '',
       whiteboardCategories = [],
       colors = ['yellow', 'red', 'blue', 'green'];
@@ -32,6 +32,13 @@ angular.module('floggitPostitsApp')
       },
       getColors: function () {
         return colors;
+      },
+      setId: function (id) {
+        whiteboardId = id;
+      },
+      getId: function () {
+        return whiteboardId;
       }
+
     };
   });

@@ -1265,3 +1265,408 @@ Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.
 
 !ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-01 13:13:27.873
 !MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-01 14:21:35.104
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-02 09:14:30.928
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-02 09:14:33.390
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-02 09:14:50.882
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-02 09:16:08.992
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-02 09:17:51.771
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-02 09:42:37.814
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-02 09:44:39.346
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-02 10:05:57.993
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-02 10:06:42.244
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-02 10:07:15.311
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-02 10:08:34.482
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-02 10:15:05.552
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-02 10:15:21.162
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-02 10:15:41.978
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-02 10:16:12.869
+!MESSAGE 6 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-02 10:16:46.981
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-02 10:21:12.980
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-02 10:22:12.666
+!MESSAGE 4 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-02 10:22:28.436
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-02 10:22:33.325
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-02 10:22:53.456
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-02 10:22:59.382
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-02 10:25:51.331
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-02 10:27:41.556
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-02 10:28:10.574
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-02 10:28:24.945
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-02 10:29:53.897
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-02 11:01:08.926
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-02 11:01:32.308
+!MESSAGE 4 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-02 11:02:15.787
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-02 11:03:01.117
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-02 11:05:26.965
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-02 11:05:53.586
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-02 11:07:24.454
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-02 11:08:04.049
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-02 12:27:23.549
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-02 12:28:15.604
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-02 12:28:53.442
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-02 12:34:52.552
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-02 12:35:42.269
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-02 12:37:09.688
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-02 12:37:27.682
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-02 12:39:59.943
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-02 12:43:23.877
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-02 12:43:40.580
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-02 12:47:49.631
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-02 12:49:34.481
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-02 12:52:33.320
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-02 12:52:56.182
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-02 12:53:35.728
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-02 12:56:11.937
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-02 12:56:23.330
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-02 12:57:34.778
+!MESSAGE 5 files modified in module socket-server
+!SESSION 2014-10-02 12:58:19.024 -----------------------------------------------
+eclipse.buildId=4.3.2.M20140221-1700
+java.version=1.7.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=sv_SE
+Framework arguments:  -product org.eclipse.epp.package.jee.product -keyring /Users/andreaberglund/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.jee.product -keyring /Users/andreaberglund/.eclipse_keyring -showlocation
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-02 12:59:43.222
+!MESSAGE 6 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2014-10-02 12:59:44.461
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2014-10-02 12:59:51.719
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-03 09:11:15.646
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-03 09:44:38.229
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-03 09:46:53.719
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-03 09:49:03.351
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-03 09:49:28.651
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-03 09:50:43.414
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-03 09:53:32.825
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-03 09:53:38.062
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-03 09:56:35.349
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-03 09:57:14.807
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-03 10:00:53.372
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-03 10:03:00.439
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-03 10:03:21.344
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-03 10:05:28.173
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-03 10:06:21.553
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-03 10:06:32.903
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-03 10:08:37.824
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-03 10:09:13.953
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-03 10:11:08.577
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-03 10:11:48.718
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-03 10:16:12.312
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-03 10:16:52.817
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-03 10:21:13.364
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-03 10:21:33.108
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-03 10:31:41.256
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-04 15:26:34.132
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-04 15:27:42.992
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-04 15:28:12.454
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-04 15:32:37.115
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-04 15:32:42.306
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-04 15:34:47.132
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-04 15:39:31.951
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-04 15:42:53.514
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-04 15:47:13.579
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-04 15:48:03.984
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-04 15:51:48.679
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-04 15:51:52.852
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-04 15:52:10.517
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-04 15:52:48.979
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-04 15:57:01.781
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-04 15:58:47.924
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-04 15:58:51.901
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-04 15:59:12.219
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-04 15:59:34.123
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-04 16:04:01.610
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-04 16:04:15.801
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-04 16:05:01.260
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-04 16:09:22.162
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-04 16:11:20.448
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-04 16:13:01.414
+!MESSAGE 6 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-04 16:13:07.649
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-04 16:13:13.253
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-04 16:13:42.724
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-04 16:14:23.333
+!MESSAGE 4 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-04 16:15:34.465
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-04 16:15:39.969
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-04 16:24:00.028
+!MESSAGE 5 files modified in module socket-server
+!SESSION 2014-10-04 16:24:37.094 -----------------------------------------------
+eclipse.buildId=4.3.2.M20140221-1700
+java.version=1.7.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=sv_SE
+Framework arguments:  -product org.eclipse.epp.package.jee.product -keyring /Users/andreaberglund/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.jee.product -keyring /Users/andreaberglund/.eclipse_keyring -showlocation
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-04 16:25:32.485
+!MESSAGE 6 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 0 2014-10-04 16:25:44.922
+!MESSAGE Module socket-server on wildfly-8.0.0.Final not yet fully deployed. Waiting...
+
+!ENTRY org.jboss.ide.eclipse.as.core 2 0 2014-10-04 16:26:00.932
+!MESSAGE Module socket-server on wildfly-8.0.0.Final still not ready to be shown in browser. Aborting delay.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16973825 2014-10-04 16:26:13.868
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2014-10-04 16:26:14.765
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.jmx.integration 4 0 2014-10-04 16:26:15.321
+!MESSAGE Error connecting to jmx for server wildfly-8.0.0.Final
+!STACK 1
+org.jboss.tools.jmx.core.JMXException: Unable to reach JBoss instance. Please ensure your server is up and exposes its management ports via the -Djboss.bind.address.management=yourwebsite.com system property
+	at org.jboss.ide.eclipse.as.jmx.integration.JBoss71ServerConnection.createConnection(JBoss71ServerConnection.java:100)
+	at org.jboss.ide.eclipse.as.jmx.integration.JBossServerConnection.run(JBossServerConnection.java:175)
+	at org.jboss.ide.eclipse.as.jmx.integration.JBossServerConnection.run(JBossServerConnection.java:144)
+	at org.jboss.ide.eclipse.as.jmx.integration.JBossServerConnection.run(JBossServerConnection.java:118)
+	at org.jboss.ide.eclipse.as.jmx.integration.JBossServerConnection.connectToStartedServer(JBossServerConnection.java:271)
+	at org.jboss.ide.eclipse.as.jmx.integration.JBossServerConnection$1.run(JBossServerConnection.java:263)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: java.lang.RuntimeException: Operation failed with status WAITING
+	at org.jboss.remotingjmx.RemotingConnector.internalRemotingConnect(RemotingConnector.java:240)
+	at org.jboss.remotingjmx.RemotingConnector.internalConnect(RemotingConnector.java:151)
+	at org.jboss.remotingjmx.RemotingConnector.connect(RemotingConnector.java:102)
+	at javax.management.remote.JMXConnectorFactory.connect(JMXConnectorFactory.java:268)
+	at org.jboss.ide.eclipse.as.jmx.integration.JBoss71ServerConnection.createConnection(JBoss71ServerConnection.java:84)
+	... 6 more
+!SUBENTRY 1 org.jboss.ide.eclipse.as.core 4 0 2014-10-04 16:26:15.322
+!MESSAGE Unable to reach JBoss instance. Please ensure your server is up and exposes its management ports via the -Djboss.bind.address.management=yourwebsite.com system property
+!STACK 0
+java.lang.RuntimeException: Operation failed with status WAITING
+	at org.jboss.remotingjmx.RemotingConnector.internalRemotingConnect(RemotingConnector.java:240)
+	at org.jboss.remotingjmx.RemotingConnector.internalConnect(RemotingConnector.java:151)
+	at org.jboss.remotingjmx.RemotingConnector.connect(RemotingConnector.java:102)
+	at javax.management.remote.JMXConnectorFactory.connect(JMXConnectorFactory.java:268)
+	at org.jboss.ide.eclipse.as.jmx.integration.JBoss71ServerConnection.createConnection(JBoss71ServerConnection.java:84)
+	at org.jboss.ide.eclipse.as.jmx.integration.JBossServerConnection.run(JBossServerConnection.java:175)
+	at org.jboss.ide.eclipse.as.jmx.integration.JBossServerConnection.run(JBossServerConnection.java:144)
+	at org.jboss.ide.eclipse.as.jmx.integration.JBossServerConnection.run(JBossServerConnection.java:118)
+	at org.jboss.ide.eclipse.as.jmx.integration.JBossServerConnection.connectToStartedServer(JBossServerConnection.java:271)
+	at org.jboss.ide.eclipse.as.jmx.integration.JBossServerConnection$1.run(JBossServerConnection.java:263)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)

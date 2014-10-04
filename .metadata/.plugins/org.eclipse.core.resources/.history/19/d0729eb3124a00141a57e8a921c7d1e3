@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+<hibernate-mapping>
+   <class name="se.berglund.models.Postit" table="postits">
+      <meta attribute="class-description">
+         This class is model for a postit in postits 
+      </meta>
+      <id name="id" type="int" column="id">
+         <generator class="native"/>
+      </id>
+      <property name="categoryId" column="category_id" type="int"/>
+      <property name="whiteboardId" column="whiteboard_id" type="int"/>
+      <property name="name" column="name" type="string"/>
+      <property name="content" column="content" type="string"/>
+   </class>
+</hibernate-mapping>

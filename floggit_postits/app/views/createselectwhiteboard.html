@@ -17,9 +17,9 @@
 		<input type="text" class="form-control" placeholder="Search existing whiteboard" ng-model="searchText">
 		<br>
 		<div ng-repeat="board in allWhiteboards | filter:{name:searchText}">
-			<div class="wb-name" name="board.name" ng-model="whiteboard"> 
-				<p id="board-name" ng-click="choosenWhiteboard(board.name)">{{ board.name}} </p> 
-				<span id="delete-whiteboard" class="glyphicon glyphicon-remove" ng-click="confirm(deleteWhiteboard(board.name))"></span>
+			<div class="wb-name" name="board.name" id="board.id" ng-model="whiteboard"> 
+				<p id="board-name" ng-click="choosenWhiteboard(board.id, board.name)">{{ board.name}} </p> 
+				<span id="delete-whiteboard" class="glyphicon glyphicon-remove" ng-click="confirm(deleteWhiteboard(board.id))"></span>
 			</div>
 		</div>	
 	</div>

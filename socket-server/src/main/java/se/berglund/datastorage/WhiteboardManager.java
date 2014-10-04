@@ -58,9 +58,9 @@ public class WhiteboardManager {
 		Transaction tr = session.beginTransaction();
 
 		Query query = session
-				.createQuery("from Whiteboard where name = :name ");
-		query.setParameter("name",
-				message.getData().getJsonObject(0).getString("name"));
+				.createQuery("from Whiteboard where id = :id ");
+		query.setParameter("id",
+				Integer.parseInt(message.getData().getJsonObject(0).getString("id")));
 		
 		@SuppressWarnings("unchecked")
 		List<Whiteboard> list = query.list();

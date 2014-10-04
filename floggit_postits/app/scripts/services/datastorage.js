@@ -8,7 +8,7 @@
  * Factory in the floggitPostitsApp.
  */
 angular.module('floggitPostitsApp')
-  .factory('dataStorage', function ($rootScope, $http, $q) {
+  .factory('dataStorage', function ($rootScope) {
 
     var url = 'ws://localhost:8080/socket-server/whiteboards';
     var websocket = new WebSocket(url);
@@ -29,15 +29,27 @@ angular.module('floggitPostitsApp')
       if (jsonResponse.type === 'create-whiteboard' || jsonResponse.type === 'delete-whiteboard') {
         $rootScope.$broadcast('create-delete-whiteboard');
       }
+      if (jsonResponse.type === 'get-current-whiteboard') {
+        var categories = [];
+        var postits = [];
+        categories = jsonResponse.dataArray[0];
+        console.log(categories);
+        postits = jsonResponse.dataArray[1];
+        console.log(postits);
+        var categoriesWithPostits = sortPostitsIntoCategories(categories, postits);
+
+        $rootScope.$broadcast('get-current-whiteboard', categoriesWithPostits);
+      }
 
     };
+    // Få ut rätt info till hemsidan. 
+    //
 
     function sendSocketMessage(type, data) {
       var message = {
         type: type,
         dataArray: [data]
       };
-      console.log(message);
       if (open) {
         websocket.send(JSON.stringify(message));
       }
@@ -50,43 +62,43 @@ angular.module('floggitPostitsApp')
     };
 
     function createPostit(whiteboard, postit) {
-      return basicPost(whiteboard, 'postits', postit);
+      return (whiteboard, 'postits', postit);
     }
 
     function createCategory(whiteboard, categoryName) {
       if (categoryName === undefined || categoryName === '') {
         categoryName = 'New Category';
       }
-      return basicPost(whiteboard, 'categories', {
+      return (whiteboard, 'categories', {
         name: categoryName
       });
     }
 
     function getAllCategoriesFor(whiteboard) {
-      return basicGet(whiteboard, 'categories');
+      return whiteboard;
     }
 
     function getAllPostitsFor(whiteboard) {
-      return basicGet(whiteboard, 'postits');
+      return whiteboard;
     }
 
     function updatePostit(whiteboard, postit) {
-      return basicPut(whiteboard, 'postits', postit, postit.id);
+      return whiteboard, postit;
     }
 
     function updateCategory(whiteboard, category) {
       var filteredCategory = {};
       filteredCategory.id = category.id;
       filteredCategory.name = category.name;
-      return basicPut(whiteboard, 'categories', filteredCategory, category.id);
+      return null;
     }
 
     function deletePostit(whiteboard, id) {
-      return basicDelete(whiteboard, 'postits', id);
+      return whiteboard, id;
     }
 
     function deleteCategory(whiteboard, id) {
-      return basicDelete(whiteboard, 'categories', id);
+      return whiteboard, id;
     }
 
     function addPostitToCorrespondingCategory(categories, postit) {
@@ -108,18 +120,11 @@ angular.module('floggitPostitsApp')
       return categories;
     }
 
-    function getAll(whiteboard) {
+    function getAll(whiteboardId) {
       var currentWhiteboard = {
-        name: whiteboard
+        id: whiteboardId
       };
       return sendSocketMessage('get-current-whiteboard', currentWhiteboard);
-      /*$q.all([
-          getAllCategoriesFor(whiteboard), // res[0] === categories
-          getAllPostitsFor(whiteboard) // res[1] === postits
-        ])
-        .then(function (res) {
-          return sortPostitsIntoCategories(res[0], res[1]);
-        });*/
     }
 
     function getAllWhiteboards() {
@@ -134,8 +139,8 @@ angular.module('floggitPostitsApp')
       return sendSocketMessage('create-whiteboard', newWhiteboard);
     }
 
-    function deleteWhiteboard(boardName) {
-      return sendSocketMessage('delete-whiteboard', boardName);
+    function deleteWhiteboard(id) {
+      return sendSocketMessage('delete-whiteboard', id);
     }
 
     return {

@@ -1,0 +1,56 @@
+package se.berglund.datastorage;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+
+import se.berglund.models.Postit;
+
+public class CurrentWhiteboardManager {
+	
+	// THREAD SECURITY for maps
+	
+	private String currentWhiteboardName; 
+	
+	public CurrentWhiteboardManager(){}
+	
+	public CurrentWhiteboardManager(String name){
+		this.currentWhiteboardName = name; 
+	}
+
+	public String getCurrentWhiteboardName() {
+		return currentWhiteboardName;
+	}
+
+	public void setCurrentWhiteboardName(String currentWhiteboardName) {
+		this.currentWhiteboardName = currentWhiteboardName;
+	}
+	
+	public Map<String, Postit> getAllForCategory(){
+		Map<String, Postit> categoriesWithPostits = new HashMap<String, Postit>();
+		
+		//Get all categories from DB
+		SessionFactory sessFactory = HibernateSessionFactory
+				.getSessionFactory();
+		Session session = sessFactory.openSession();
+		Transaction tr = session.beginTransaction();
+
+		String strSql = "from Category c";
+		Query query = session.createQuery(strSql);
+		
+		@SuppressWarnings("rawtypes")
+		List categories = query.list();
+		
+		//Get all postits from DB
+	
+		tr.commit();
+	
+		return categoriesWithPostits; 
+		
+	}
+}
