@@ -8,8 +8,6 @@
 <fullyQualifiedTypeName name="se.berglund.messagehandlers.MessageHandler"/>
 <fullyQualifiedTypeName name="java.util.Collections"/>
 <fullyQualifiedTypeName name="org.hibernate.SessionFactory"/>
-<fullyQualifiedTypeName name="javax.json.JsonReader"/>
-<fullyQualifiedTypeName name="javax.json.Json"/>
 <fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="org.hibernate.Session"/>
 <fullyQualifiedTypeName name="org.hibernate.service.ServiceRegistry"/>
@@ -19,15 +17,22 @@
 <fullyQualifiedTypeName name="org.hibernate.boot.registry.StandardServiceRegistryBuilder"/>
 <fullyQualifiedTypeName name="org.hibernate.cfg.Configuration"/>
 <fullyQualifiedTypeName name="org.hibernate.Transaction"/>
-<fullyQualifiedTypeName name="javax.json.JsonObject"/>
 <fullyQualifiedTypeName name="se.berglund.datastorage.WhiteboardManager"/>
 <fullyQualifiedTypeName name="se.berglund.models.Message"/>
-<fullyQualifiedTypeName name="se.berglund.datastorage.CurrentWhiteboardManager"/>
 <fullyQualifiedTypeName name="java.util.Map"/>
 <fullyQualifiedTypeName name="java.util.HashMap"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
-<fullyQualifiedTypeName name="se.berglund.models.Category"/>
-<fullyQualifiedTypeName name="se.berglund.models.Postit"/>
 <fullyQualifiedTypeName name="javax.json.JsonArrayBuilder"/>
 <fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="se.berglund.models.Category"/>
+<fullyQualifiedTypeName name="se.berglund.datastorage.CurrentWhiteboardManager"/>
+<fullyQualifiedTypeName name="se.berglund.datastorage.CategoryManager"/>
+<fullyQualifiedTypeName name="se.berglund.datastorage.PostitManager"/>
+<fullyQualifiedTypeName name="javax.json.JsonValue"/>
+<fullyQualifiedTypeName name="javax.json.Json"/>
+<fullyQualifiedTypeName name="java.io.Reader"/>
+<fullyQualifiedTypeName name="javax.json.JsonReader"/>
+<fullyQualifiedTypeName name="java.io.StringReader"/>
+<fullyQualifiedTypeName name="javax.json.JsonObject"/>
+<fullyQualifiedTypeName name="se.berglund.models.Postit"/>
 </qualifiedTypeNameHistroy>

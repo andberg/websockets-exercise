@@ -1,0 +1,42 @@
+package se.berglund.datastorage;
+
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+
+import se.berglund.models.Category;
+import se.berglund.models.Postit;
+
+public class CategoryManager {
+	
+	public void updateCategory(Category category){
+		SessionFactory sessFactory = HibernateSessionFactory
+				.getSessionFactory();
+		Session session = sessFactory.openSession();
+		Transaction tr = session.beginTransaction();
+		session.update(category);
+		tr.commit();
+	}
+	
+	public void deleteCategory(Category category){
+		
+		SessionFactory sessFactory = HibernateSessionFactory
+				.getSessionFactory();
+		Session session = sessFactory.openSession();
+		Transaction tr = session.beginTransaction();
+		
+		if(!category.getPostits().isEmpty()){
+			SessionFactory sessionFactory = HibernateSessionFactory
+					.getSessionFactory();
+			Session sessionPostit = sessionFactory.openSession();
+			Transaction transaction = sessionPostit.beginTransaction();
+			Query query = sessionPostit
+					.createQuery("DELETE from Postit p WHERE categoryId = :id ");
+			query.setParameter("id", category.getId());
+			transaction.commit();
+		}
+		session.delete(category);
+		tr.commit();
+	}
+}

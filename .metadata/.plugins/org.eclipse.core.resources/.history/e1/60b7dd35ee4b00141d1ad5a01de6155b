@@ -1,0 +1,20 @@
+package se.berglund.datastorage;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+
+import se.berglund.models.Category;
+
+public class CategoryManager {
+	
+	public void updateCategory(Category category){
+		SessionFactory sessFactory = HibernateSessionFactory
+				.getSessionFactory();
+		Session session = sessFactory.openSession();
+		Transaction tr = session.beginTransaction();
+		session.update(category);
+		tr.commit();
+
+	}
+}

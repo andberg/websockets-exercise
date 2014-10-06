@@ -10,7 +10,6 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
-import se.berglund.models.Message;
 import se.berglund.models.Whiteboard;
 
 public class WhiteboardManager {
@@ -20,7 +19,7 @@ public class WhiteboardManager {
 
 	@SuppressWarnings("unchecked")
 	@Transactional
-	public static ArrayList<Whiteboard> getAllWhiteboards() {
+	public ArrayList<Whiteboard> getAllWhiteboards() {
 
 		SessionFactory sessFactory = HibernateSessionFactory
 				.getSessionFactory();
@@ -51,21 +50,11 @@ public class WhiteboardManager {
 
 	}
 
-	public void deleteWhiteboard(Message message) {
+	public void deleteWhiteboard(Whiteboard whiteboard) {
 		SessionFactory sessFactory = HibernateSessionFactory
 				.getSessionFactory();
 		Session session = sessFactory.openSession();
 		Transaction tr = session.beginTransaction();
-
-		Query query = session
-				.createQuery("from Whiteboard where id = :id ");
-		query.setParameter("id",
-				Integer.parseInt(message.getData().getJsonObject(0).getString("id")));
-		
-		@SuppressWarnings("unchecked")
-		List<Whiteboard> list = query.list();
-		Whiteboard whiteboard = (Whiteboard) list.get(0);
-
 		session.delete(whiteboard);
 		tr.commit();
 

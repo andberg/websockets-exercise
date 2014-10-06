@@ -22,10 +22,13 @@ angular.module('floggitPostitsApp')
           dataStorage.getAll(currentWhiteboard.getId());
         }
         getAllData();
-        $scope.$on('get-current-whiteboard', function (event, data) {
-          console.log(data);
+        $scope.$on('set-current-whiteboard', function (event, data) {
           currentWhiteboard.setCategories(data);
           $scope.$apply();
+        });
+
+        $scope.$on('data-updated', function () {
+          getAllData();
         });
       }
     };

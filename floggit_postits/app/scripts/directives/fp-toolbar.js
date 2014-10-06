@@ -40,17 +40,17 @@ angular.module('floggitPostitsApp')
               title: $scope.newPostit.title,
               description: $scope.newPostit.description,
               category: $scope.newPostit.category.id,
-              color: $scope.newPostit.color
+              color: $scope.newPostit.color,
+              whiteboard: currentWhiteboard.getId()
             };
-            dataStorage.createPostit(currentWhiteboard.getName(), postit).then(function () {
-              $scope.resetForm();
-              sockets.sendSocketMessage('newData');
-            });
+            dataStorage.createPostit(postit);
           }
         };
+        $scope.$on('reset-form', function () {
+          $scope.resetForm();
+        });
         $scope.createCategory = function () {
-          dataStorage.createCategory(currentWhiteboard.getName());
-          sockets.sendSocketMessage('newData');
+          dataStorage.createCategory(currentWhiteboard.getId());
         };
       }
     };

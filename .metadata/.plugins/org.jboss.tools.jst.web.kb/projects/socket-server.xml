@@ -18,8 +18,8 @@
   <path value="/Users/andreaberglund/.m2/repository/org/hibernate/hibernate-core/4.3.4.Final/hibernate-core-4.3.4.Final.jar"/>
   <path value="/Users/andreaberglund/.m2/repository/junit/junit/3.8.1/junit-3.8.1.jar"/>
   <path value="/Users/andreaberglund/.m2/repository/mysql/mysql-connector-java/5.1.32/mysql-connector-java-5.1.32.jar"/>
-  <path value="/Users/andreaberglund/.m2/repository/org/jboss/spec/javax/transaction/jboss-transaction-api_1.2_spec/1.0.0.Final/jboss-transaction-api_1.2_spec-1.0.0.Final.jar"/>
   <path value="/Users/andreaberglund/.m2/repository/com/sun/mail/javax.mail/1.5.0/javax.mail-1.5.0.jar"/>
+  <path value="/Users/andreaberglund/.m2/repository/org/jboss/spec/javax/transaction/jboss-transaction-api_1.2_spec/1.0.0.Final/jboss-transaction-api_1.2_spec-1.0.0.Final.jar"/>
  </paths>
  <validation>
   <core validator-id="jsf-verification"/>

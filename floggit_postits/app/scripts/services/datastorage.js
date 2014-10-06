@@ -7,6 +7,7 @@
  * # dataStorage
  * Factory in the floggitPostitsApp.
  */
+
 angular.module('floggitPostitsApp')
   .factory('dataStorage', function ($rootScope) {
 
@@ -33,17 +34,17 @@ angular.module('floggitPostitsApp')
         var categories = [];
         var postits = [];
         categories = jsonResponse.dataArray[0];
-        console.log(categories);
         postits = jsonResponse.dataArray[1];
-        console.log(postits);
         var categoriesWithPostits = sortPostitsIntoCategories(categories, postits);
-
-        $rootScope.$broadcast('get-current-whiteboard', categoriesWithPostits);
+        $rootScope.$broadcast('set-current-whiteboard', categoriesWithPostits);
       }
-
+      if (jsonResponse.type === 'delete-category' || jsonResponse.type === 'create-category' || jsonResponse.type === 'update-category' || jsonResponse.type === 'create-postit' || jsonResponse.type === 'update-postit' || jsonResponse.type === 'delete-postit') {
+        $rootScope.$broadcast('data-updated', 'trigger refresh');
+        if (jsonResponse.type === 'create-postit') {
+          $rootScope.$broadcast('reset-form', 'trigger refresh');
+        }
+      }
     };
-    // Få ut rätt info till hemsidan. 
-    //
 
     function sendSocketMessage(type, data) {
       var message = {
@@ -53,7 +54,6 @@ angular.module('floggitPostitsApp')
       if (open) {
         websocket.send(JSON.stringify(message));
       }
-
     }
 
     websocket.onclose = function () {
@@ -61,44 +61,33 @@ angular.module('floggitPostitsApp')
       open = false;
     };
 
-    function createPostit(whiteboard, postit) {
-      return (whiteboard, 'postits', postit);
+    function createPostit(postit) {
+      return sendSocketMessage('create-postit', postit);
     }
 
-    function createCategory(whiteboard, categoryName) {
-      if (categoryName === undefined || categoryName === '') {
-        categoryName = 'New Category';
-      }
-      return (whiteboard, 'categories', {
-        name: categoryName
-      });
+    function createCategory(whiteboardId) {
+      var category = {
+        name: 'new Category',
+        whiteboard: whiteboardId
+      };
+      console.log(whiteboardId);
+      return sendSocketMessage('create-category', category);
     }
 
-    function getAllCategoriesFor(whiteboard) {
-      return whiteboard;
+    function updatePostit(postit) {
+      return sendSocketMessage('update-postit', postit);
     }
 
-    function getAllPostitsFor(whiteboard) {
-      return whiteboard;
+    function updateCategory(category) {
+      return sendSocketMessage('update-category', category);
     }
 
-    function updatePostit(whiteboard, postit) {
-      return whiteboard, postit;
+    function deletePostit(postit) {
+      return sendSocketMessage('delete-postit', postit);
     }
 
-    function updateCategory(whiteboard, category) {
-      var filteredCategory = {};
-      filteredCategory.id = category.id;
-      filteredCategory.name = category.name;
-      return null;
-    }
-
-    function deletePostit(whiteboard, id) {
-      return whiteboard, id;
-    }
-
-    function deleteCategory(whiteboard, id) {
-      return whiteboard, id;
+    function deleteCategory(category) {
+      return sendSocketMessage('delete-category', category);
     }
 
     function addPostitToCorrespondingCategory(categories, postit) {
@@ -150,11 +139,9 @@ angular.module('floggitPostitsApp')
       updateCategory: updateCategory,
       deletePostit: deletePostit,
       deleteCategory: deleteCategory,
-      getAllCategoriesFor: getAllCategoriesFor,
-      getAllPostitsFor: getAllPostitsFor,
       getAll: getAll,
       createWhiteboard: createWhiteboard,
       getAllWhiteboards: getAllWhiteboards,
-      deleteWhiteboard: deleteWhiteboard,
+      deleteWhiteboard: deleteWhiteboard
     };
   });

@@ -1,0 +1,32 @@
+package se.berglund.datastorage;
+
+import java.util.ArrayList;
+
+import javax.json.JsonArray;
+
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+
+import se.berglund.models.Category;
+
+public class CategoryManager {
+	
+	public Category updateCategory(Category category){
+		SessionFactory sessFactory = HibernateSessionFactory
+				.getSessionFactory();
+		Session session = sessFactory.openSession();
+		Transaction tr = session.beginTransaction();
+
+		Query query = session
+				.createQuery("from Category c WHERE categoryId = :id ");
+		query.setParameter("id", );
+
+		@SuppressWarnings("unchecked")
+		ArrayList<Category> categories = (ArrayList<Category>) query.list();
+		tr.commit();
+
+		return category;	
+	}
+}
