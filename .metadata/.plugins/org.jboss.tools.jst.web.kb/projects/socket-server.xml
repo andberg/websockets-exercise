@@ -18,8 +18,8 @@
   <path value="/Users/andreaberglund/.m2/repository/org/hibernate/hibernate-core/4.3.4.Final/hibernate-core-4.3.4.Final.jar"/>
   <path value="/Users/andreaberglund/.m2/repository/junit/junit/3.8.1/junit-3.8.1.jar"/>
   <path value="/Users/andreaberglund/.m2/repository/mysql/mysql-connector-java/5.1.32/mysql-connector-java-5.1.32.jar"/>
-  <path value="/Users/andreaberglund/.m2/repository/org/jboss/spec/javax/transaction/jboss-transaction-api_1.2_spec/1.0.0.Final/jboss-transaction-api_1.2_spec-1.0.0.Final.jar"/>
   <path value="/Users/andreaberglund/.m2/repository/com/sun/mail/javax.mail/1.5.0/javax.mail-1.5.0.jar"/>
+  <path value="/Users/andreaberglund/.m2/repository/org/jboss/spec/javax/transaction/jboss-transaction-api_1.2_spec/1.0.0.Final/jboss-transaction-api_1.2_spec-1.0.0.Final.jar"/>
  </paths>
  <validation>
   <core validator-id="jsf-verification"/>
@@ -38,9 +38,9 @@
    <linked-el length="21" name="%9" offset="2813" path="%1"/>
    <linked-el length="31" name="%9" offset="2424" path="%1"/>
    <linked-el length="24" name="%10" offset="2626" path="%1"/>
-   <linked-el length="21" name="%11" offset="2260" path="%1"/>
-   <linked-el length="21" name="%12" offset="2813" path="%1"/>
-   <linked-el length="31" name="%13" offset="2424" path="%1"/>
+   <linked-el length="31" name="%11" offset="2424" path="%1"/>
+   <linked-el length="21" name="%12" offset="2260" path="%1"/>
+   <linked-el length="21" name="%13" offset="2813" path="%1"/>
    <linked-el length="31" name="%14" offset="2424" path="%1"/>
   </el>
  </validation>
@@ -55,9 +55,9 @@
   <alias path="version.compiler" value="%8"/>
   <alias path="version" value="%9"/>
   <alias path="maven.compiler.source" value="%10"/>
-  <alias path="version.wildfly.maven.plugin" value="%13"/>
-  <alias path="version.war" value="%12"/>
-  <alias path="project" value="%11"/>
+  <alias path="version.war" value="%13"/>
+  <alias path="project" value="%12"/>
+  <alias path="version.wildfly.maven.plugin" value="%11"/>
   <alias path="version.wildfly.maven" value="%14"/>
   <alias path="/socket-server/pom.xml" value="%1"/>
   <alias path="%0" value="maven"/>
@@ -71,9 +71,9 @@
   <alias path="%14" value="version.wildfly.maven"/>
   <alias path="%6" value="project.artifactId"/>
   <alias path="%9" value="version"/>
-  <alias path="%13" value="version.wildfly.maven.plugin"/>
-  <alias path="%12" value="version.war"/>
-  <alias path="%11" value="project"/>
+  <alias path="%13" value="version.war"/>
+  <alias path="%12" value="project"/>
+  <alias path="%11" value="version.wildfly.maven.plugin"/>
   <alias path="%10" value="maven.compiler.source"/>
  </aliases>
  <includes/>

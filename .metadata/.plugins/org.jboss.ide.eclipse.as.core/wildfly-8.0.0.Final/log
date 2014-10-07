@@ -2314,3 +2314,76 @@ Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.
 
 !ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-07 09:45:36.040
 !MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-07 09:49:15.733
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-07 09:54:51.688
+!MESSAGE 5 files modified in module socket-server
+!SESSION 2014-10-07 10:42:57.082 -----------------------------------------------
+eclipse.buildId=4.3.2.M20140221-1700
+java.version=1.7.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=sv_SE
+Framework arguments:  -product org.eclipse.epp.package.jee.product -keyring /Users/andreaberglund/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.jee.product -keyring /Users/andreaberglund/.eclipse_keyring -showlocation
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-07 10:54:32.512
+!MESSAGE 11 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2014-10-07 10:54:33.803
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2014-10-07 10:54:41.788
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-07 10:55:26.507
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-07 10:55:47.142
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-07 10:57:46.280
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-07 10:57:56.382
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-07 10:57:58.736
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-07 10:58:52.487
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-07 10:59:24.917
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-07 10:59:40.097
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-07 11:01:10.902
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-07 11:01:13.004
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-07 11:01:51.925
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-07 11:02:28.157
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-07 11:02:31.734
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-07 11:03:47.781
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-07 11:04:45.530
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-07 11:05:00.132
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-07 11:05:03.657
+!MESSAGE 5 files modified in module socket-server

@@ -11,11 +11,22 @@ import se.berglund.models.Category;
 import se.berglund.models.Postit;
 
 public class CurrentWhiteboardManager {
-	
+
 	private int currentWhiteboardId;
 
-	public CurrentWhiteboardManager(int id) {
-		this.setCurrentWhiteboardId(id);
+	private static CurrentWhiteboardManager firstInstance = null;
+
+	private CurrentWhiteboardManager() {
+	}
+
+	public static CurrentWhiteboardManager getInstance() {
+		synchronized (CurrentWhiteboardManager.class) {
+
+			if (firstInstance == null) {
+				firstInstance = new CurrentWhiteboardManager();
+			}
+			return firstInstance;
+		}
 	}
 
 	public int getCurrentWhiteboardId() {
@@ -32,34 +43,51 @@ public class CurrentWhiteboardManager {
 				.getSessionFactory();
 		Session session = sessFactory.openSession();
 		Transaction tr = session.beginTransaction();
+		try {
+			Query query = session
+					.createQuery("from Category c WHERE whiteboardId = :id ");
+			query.setParameter("id", currentWhiteboardId);
 
-		Query query = session
-				.createQuery("from Category c WHERE whiteboardId = :id ");
-		query.setParameter("id", currentWhiteboardId);
-
-		@SuppressWarnings("unchecked")
-		ArrayList<Category> categories = (ArrayList<Category>) query.list();
-		tr.commit();
-		return categories;
+			@SuppressWarnings("unchecked")
+			ArrayList<Category> categories = (ArrayList<Category>) query.list();
+			tr.commit();
+			return categories;
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+			tr.rollback();
+			return null;
+			
+		} finally {
+			session.close();
+		}
 
 	}
 
 	public ArrayList<Postit> getAllPostitsForCurrentWhiteboard() {
-		
+
 		SessionFactory sessFactory = HibernateSessionFactory
 				.getSessionFactory();
 		Session session = sessFactory.openSession();
 		Transaction tr = session.beginTransaction();
+		try {
+			Query query = session
+					.createQuery("from Postit p WHERE whiteboardId = :id ");
+			query.setParameter("id", currentWhiteboardId);
+			
+			@SuppressWarnings("unchecked")
+			ArrayList<Postit> postits = (ArrayList<Postit>) query.list();
+			tr.commit();
+			return postits;
 
-		Query query = session
-				.createQuery("from Postit p WHERE whiteboardId = :id ");
-		query.setParameter("id", currentWhiteboardId);
-
-		@SuppressWarnings("unchecked")
-		ArrayList<Postit> postits = (ArrayList<Postit>) query.list();
-		tr.commit();
-
-		return postits;
+		} catch (Exception e){
+			e.printStackTrace();
+			tr.rollback();
+			return null; 
+			
+		} finally {
+			session.close(); 
+		}
 	}
 
 }

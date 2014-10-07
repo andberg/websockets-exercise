@@ -47,8 +47,7 @@ public class MessageHandler {
 			}
 
 			if (message.getType().contains("delete-whiteboard")) {
-				whiteboard.setId(message.getData().getJsonObject(0).getInt("id"));
-				whiteboard.setName(message.getData().getJsonObject(0).getString("name"));
+				whiteboard.setId(Integer.parseInt(message.getData().getJsonObject(0).getString("id")));
 				whiteboardManager.deleteWhiteboard(whiteboard);
 			}
 		}
@@ -57,9 +56,8 @@ public class MessageHandler {
 		// First as arraylists and ten as json. 
 
 		if (message.getType().contains("get-current-whiteboard")) {
-			CurrentWhiteboardManager cwm = new CurrentWhiteboardManager(
-					Integer.parseInt(message.getData().getJsonObject(0)
-							.getString("id")));
+			CurrentWhiteboardManager cwm = CurrentWhiteboardManager.getInstance(); 
+			cwm.setCurrentWhiteboardId(Integer.parseInt(message.getData().getJsonObject(0).getString("id")));
 
 			ArrayList<Category> categoriesForWhiteboard = cwm
 					.getAllCategoriesForCurrentWhiteboard();
@@ -83,7 +81,7 @@ public class MessageHandler {
 		if (message.getType().contains("category")) {
 
 			Category category = new Category();
-			CategoryManager categoryManager = new CategoryManager();
+			CategoryManager categoryManager = CategoryManager.getInstance();
 
 			if (message.getType().contains("create")) {
 				category.setWhiteboardId(Integer.parseInt(message.getData()
@@ -130,7 +128,7 @@ public class MessageHandler {
 		// Redirect to PostitManager for full CRUD functionality
 
 		if (message.getType().contains("postit")) {
-			PostitManager postitManager = new PostitManager();
+			PostitManager postitManager = PostitManager.getInstance(); 
 			Postit postit = new Postit();
 			if (message.getType().contains("create")) {
 				postit.setWhiteboardId(Integer.parseInt(message.getData()

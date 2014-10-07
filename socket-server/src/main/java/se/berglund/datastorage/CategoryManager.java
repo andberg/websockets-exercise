@@ -9,16 +9,37 @@ import se.berglund.models.Postit;
 
 public class CategoryManager {
 
-	public CategoryManager() {
+	private static CategoryManager firstInstance = null;
+
+	private CategoryManager() {
+	}
+
+	public static CategoryManager getInstance() {
+		synchronized (CategoryManager.class) {
+
+			if (firstInstance == null) {
+				firstInstance = new CategoryManager();
+			}
+			return firstInstance;
+		}
 	}
 
 	public void updateCategory(Category category) {
+
 		SessionFactory sessFactory = HibernateSessionFactory
 				.getSessionFactory();
 		Session session = sessFactory.openSession();
 		Transaction tr = session.beginTransaction();
-		session.update(category);
-		tr.commit();
+
+		try {
+			session.update(category);
+			tr.commit();
+		} catch (Exception e) {
+			e.printStackTrace();
+			tr.rollback();
+		} finally {
+			session.close();
+		}
 	}
 
 	public void createCategory(Category category) {
@@ -26,8 +47,16 @@ public class CategoryManager {
 				.getSessionFactory();
 		Session session = sessFactory.openSession();
 		Transaction tr = session.beginTransaction();
-		session.save(category);
-		tr.commit();
+
+		try {
+			session.save(category);
+			tr.commit();
+		} catch (Exception e) {
+			e.printStackTrace();
+			tr.rollback();
+		} finally {
+			session.close();
+		}
 	}
 
 	public void deleteCategory(Category category) {
@@ -42,14 +71,24 @@ public class CategoryManager {
 					.getSessionFactory();
 			Session sessionPostit = sessionFactory.openSession();
 			Transaction transaction = sessionPostit.beginTransaction();
-
-			for (Postit post : category.getPostits()) {
-				sessionPostit.delete(post);
+			try {
+				for (Postit post : category.getPostits()) {
+					sessionPostit.delete(post);
+				}
+				transaction.commit();
+			} catch (Exception e) {
+				e.printStackTrace();
+				transaction.rollback();
 			}
-			transaction.commit();
 		}
-
-		session.delete(category);
-		tr.commit();
+		try {
+			session.delete(category);
+			tr.commit();
+		} catch (Exception e) {
+			e.printStackTrace();
+			tr.rollback();
+		} finally {
+			session.close();
+		}
 	}
 }

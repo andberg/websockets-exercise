@@ -7,7 +7,20 @@ import org.hibernate.Transaction;
 import se.berglund.models.Postit;
 
 public class PostitManager {
-	public PostitManager() {
+
+	private static PostitManager firstInstance = null;
+
+	private PostitManager() {
+	}
+
+	public static PostitManager getInstance() {
+		synchronized (CurrentWhiteboardManager.class) {
+
+			if (firstInstance == null) {
+				firstInstance = new PostitManager();
+			}
+			return firstInstance;
+		}
 	}
 
 	public void updatePostit(Postit postit) {
@@ -15,8 +28,16 @@ public class PostitManager {
 				.getSessionFactory();
 		Session session = sessFactory.openSession();
 		Transaction tr = session.beginTransaction();
-		session.update(postit);
-		tr.commit();
+
+		try {
+			session.update(postit);
+			tr.commit();
+		} catch (Exception e) {
+			e.printStackTrace();
+			tr.rollback();
+		} finally {
+			session.close();
+		}
 	}
 
 	public void deletePostit(Postit postit) {
@@ -24,8 +45,16 @@ public class PostitManager {
 				.getSessionFactory();
 		Session session = sessFactory.openSession();
 		Transaction tr = session.beginTransaction();
-		session.delete(postit);
-		tr.commit();
+
+		try {
+			session.delete(postit);
+			tr.commit();
+		} catch (Exception e) {
+			e.printStackTrace();
+			tr.rollback();
+		} finally {
+			session.close();
+		}
 	}
 
 	public void createPostit(Postit postit) {
@@ -33,7 +62,15 @@ public class PostitManager {
 				.getSessionFactory();
 		Session session = sessFactory.openSession();
 		Transaction tr = session.beginTransaction();
-		session.save(postit);
-		tr.commit();
+
+		try {
+			session.save(postit);
+			tr.commit();
+		} catch (Exception e) {
+			e.printStackTrace();
+			tr.rollback();
+		} finally {
+			session.close();
+		}
 	}
 }

@@ -33,14 +33,21 @@ public class WhiteboardManager {
 		Session session = sessFactory.openSession();
 		Transaction tr = session.beginTransaction();
 
-		String selectSQL = "from Whiteboard w";
-		Query query = session.createQuery(selectSQL);
-		@SuppressWarnings("unchecked")
-		ArrayList<Whiteboard> whiteboards = (ArrayList<Whiteboard>) query
-				.list();
-
-		tr.commit();
-		return (ArrayList<Whiteboard>) whiteboards;
+		try {
+			String selectSQL = "from Whiteboard w";
+			Query query = session.createQuery(selectSQL);
+			@SuppressWarnings("unchecked")
+			ArrayList<Whiteboard> whiteboards = (ArrayList<Whiteboard>) query
+					.list();
+			tr.commit();
+			return (ArrayList<Whiteboard>) whiteboards;
+		} catch (Exception e) {
+			tr.rollback();
+			e.printStackTrace();
+			return null;
+		} finally {
+			session.close();
+		}
 	}
 
 	public void addWhiteboard(Whiteboard whiteboard) {
@@ -48,9 +55,15 @@ public class WhiteboardManager {
 				.getSessionFactory();
 		Session session = sessFactory.openSession();
 		Transaction tr = session.beginTransaction();
-
-		session.save(whiteboard);
-		tr.commit();
+		try {
+			session.save(whiteboard);
+			tr.commit();
+		} catch (Exception e) {
+			e.printStackTrace();
+			tr.rollback();
+		} finally {
+			session.close();
+		}
 	}
 
 	public void deleteWhiteboard(Whiteboard whiteboard) {
@@ -58,8 +71,16 @@ public class WhiteboardManager {
 				.getSessionFactory();
 		Session session = sessFactory.openSession();
 		Transaction tr = session.beginTransaction();
-		session.delete(whiteboard);
-		tr.commit();
+
+		try {
+			session.delete(whiteboard);
+			tr.commit();
+		} catch (Exception e) {
+			e.printStackTrace();
+			tr.rollback();
+		} finally {
+			session.close();
+		}
 	}
 
 }
