@@ -2795,3 +2795,131 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact javax:javaee-
 2014-10-06 14:12:04,505 [Worker-92] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
 2014-10-06 14:12:04,509 [Worker-92] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2014-10-06 14:12:04,509 [Worker-92] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/andreaberglund/Dropbox/C3L/Websockets/Angular-Sockets-Exercise/socket-server/src/test/resources
+2014-10-06 14:17:00,148 [Worker-103] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-10-06 14:17:00,149 [Worker-103] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2014-10-06 14:17:00,152 [Worker-103] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-10-06 14:17:00,152 [Worker-103] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/andreaberglund/Dropbox/C3L/Websockets/Angular-Sockets-Exercise/socket-server/src/test/resources
+2014-10-06 14:17:27,759 [Worker-101] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-10-06 14:17:27,760 [Worker-101] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2014-10-06 14:17:27,763 [Worker-101] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-10-06 14:17:27,763 [Worker-101] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/andreaberglund/Dropbox/C3L/Websockets/Angular-Sockets-Exercise/socket-server/src/test/resources
+2014-10-06 14:17:58,194 [Worker-104] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-10-06 14:17:58,194 [Worker-104] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2014-10-06 14:17:58,197 [Worker-104] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-10-06 14:17:58,198 [Worker-104] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/andreaberglund/Dropbox/C3L/Websockets/Angular-Sockets-Exercise/socket-server/src/test/resources
+2014-10-06 14:18:12,685 [Worker-102] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-10-06 14:18:12,686 [Worker-102] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2014-10-06 14:18:12,688 [Worker-102] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-10-06 14:18:12,688 [Worker-102] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/andreaberglund/Dropbox/C3L/Websockets/Angular-Sockets-Exercise/socket-server/src/test/resources
+2014-10-06 14:18:24,071 [Worker-101] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-10-06 14:18:24,072 [Worker-101] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2014-10-06 14:18:24,074 [Worker-101] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-10-06 14:18:24,075 [Worker-101] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/andreaberglund/Dropbox/C3L/Websockets/Angular-Sockets-Exercise/socket-server/src/test/resources
+2014-10-06 14:19:49,283 [Worker-106] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-10-06 14:19:49,284 [Worker-106] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2014-10-06 14:19:49,287 [Worker-106] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-10-06 14:19:49,287 [Worker-106] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/andreaberglund/Dropbox/C3L/Websockets/Angular-Sockets-Exercise/socket-server/src/test/resources
+2014-10-06 14:20:13,526 [Worker-105] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-10-06 14:20:13,527 [Worker-105] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2014-10-06 14:20:13,530 [Worker-105] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-10-06 14:20:13,530 [Worker-105] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/andreaberglund/Dropbox/C3L/Websockets/Angular-Sockets-Exercise/socket-server/src/test/resources
+2014-10-06 14:20:22,854 [Worker-101] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-10-06 14:20:22,855 [Worker-101] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2014-10-06 14:20:22,857 [Worker-101] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-10-06 14:20:22,857 [Worker-101] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/andreaberglund/Dropbox/C3L/Websockets/Angular-Sockets-Exercise/socket-server/src/test/resources
+2014-10-06 14:20:31,149 [Worker-102] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-10-06 14:20:31,150 [Worker-102] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2014-10-06 14:20:31,153 [Worker-102] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-10-06 14:20:31,154 [Worker-102] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/andreaberglund/Dropbox/C3L/Websockets/Angular-Sockets-Exercise/socket-server/src/test/resources
+2014-10-06 14:20:54,869 [Worker-103] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-10-06 14:20:54,870 [Worker-103] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2014-10-06 14:20:54,873 [Worker-103] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-10-06 14:20:54,873 [Worker-103] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/andreaberglund/Dropbox/C3L/Websockets/Angular-Sockets-Exercise/socket-server/src/test/resources
+2014-10-06 14:21:32,606 [Worker-92] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-10-06 14:21:32,607 [Worker-92] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2014-10-06 14:21:32,610 [Worker-92] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-10-06 14:21:32,610 [Worker-92] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/andreaberglund/Dropbox/C3L/Websockets/Angular-Sockets-Exercise/socket-server/src/test/resources
+2014-10-06 14:21:36,244 [Worker-101] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-10-06 14:21:36,245 [Worker-101] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2014-10-06 14:21:36,247 [Worker-101] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-10-06 14:21:36,247 [Worker-101] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/andreaberglund/Dropbox/C3L/Websockets/Angular-Sockets-Exercise/socket-server/src/test/resources
+2014-10-06 14:21:50,835 [Worker-101] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-10-06 14:21:50,836 [Worker-101] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2014-10-06 14:21:50,840 [Worker-101] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-10-06 14:21:50,840 [Worker-101] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/andreaberglund/Dropbox/C3L/Websockets/Angular-Sockets-Exercise/socket-server/src/test/resources
+2014-10-06 14:21:59,713 [Worker-107] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-10-06 14:21:59,714 [Worker-107] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2014-10-06 14:21:59,716 [Worker-107] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-10-06 14:21:59,717 [Worker-107] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/andreaberglund/Dropbox/C3L/Websockets/Angular-Sockets-Exercise/socket-server/src/test/resources
+2014-10-06 14:23:32,608 [Worker-106] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-10-06 14:23:32,609 [Worker-106] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2014-10-06 14:23:32,612 [Worker-106] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-10-06 14:23:32,612 [Worker-106] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/andreaberglund/Dropbox/C3L/Websockets/Angular-Sockets-Exercise/socket-server/src/test/resources
+2014-10-06 14:24:58,661 [Worker-106] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-10-06 14:24:58,662 [Worker-106] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2014-10-06 14:24:58,665 [Worker-106] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-10-06 14:24:58,665 [Worker-106] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/andreaberglund/Dropbox/C3L/Websockets/Angular-Sockets-Exercise/socket-server/src/test/resources
+2014-10-06 14:25:17,883 [Worker-106] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-10-06 14:25:17,884 [Worker-106] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2014-10-06 14:25:17,887 [Worker-106] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-10-06 14:25:17,887 [Worker-106] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/andreaberglund/Dropbox/C3L/Websockets/Angular-Sockets-Exercise/socket-server/src/test/resources
+2014-10-06 14:25:31,447 [Worker-106] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-10-06 14:25:31,448 [Worker-106] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2014-10-06 14:25:31,451 [Worker-106] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-10-06 14:25:31,451 [Worker-106] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/andreaberglund/Dropbox/C3L/Websockets/Angular-Sockets-Exercise/socket-server/src/test/resources
+2014-10-06 14:25:46,593 [Worker-107] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-10-06 14:25:46,594 [Worker-107] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2014-10-06 14:25:46,597 [Worker-107] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-10-06 14:25:46,597 [Worker-107] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/andreaberglund/Dropbox/C3L/Websockets/Angular-Sockets-Exercise/socket-server/src/test/resources
+2014-10-06 14:25:53,063 [Worker-103] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-10-06 14:25:53,064 [Worker-103] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2014-10-06 14:25:53,067 [Worker-103] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-10-06 14:25:53,067 [Worker-103] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/andreaberglund/Dropbox/C3L/Websockets/Angular-Sockets-Exercise/socket-server/src/test/resources
+2014-10-06 14:25:59,453 [Worker-106] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-10-06 14:25:59,454 [Worker-106] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2014-10-06 14:25:59,457 [Worker-106] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-10-06 14:25:59,457 [Worker-106] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/andreaberglund/Dropbox/C3L/Websockets/Angular-Sockets-Exercise/socket-server/src/test/resources
+2014-10-06 14:27:29,561 [Worker-107] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-10-06 14:27:29,562 [Worker-107] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2014-10-06 14:27:29,565 [Worker-107] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-10-06 14:27:29,565 [Worker-107] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/andreaberglund/Dropbox/C3L/Websockets/Angular-Sockets-Exercise/socket-server/src/test/resources
+2014-10-06 14:29:20,789 [Worker-109] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-10-06 14:29:20,790 [Worker-109] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2014-10-06 14:29:20,792 [Worker-109] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-10-06 14:29:20,792 [Worker-109] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/andreaberglund/Dropbox/C3L/Websockets/Angular-Sockets-Exercise/socket-server/src/test/resources
+2014-10-06 14:30:01,768 [Worker-108] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-10-06 14:30:01,769 [Worker-108] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2014-10-06 14:30:01,772 [Worker-108] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-10-06 14:30:01,772 [Worker-108] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/andreaberglund/Dropbox/C3L/Websockets/Angular-Sockets-Exercise/socket-server/src/test/resources
+2014-10-06 14:32:13,524 [Worker-113] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-10-06 14:32:13,525 [Worker-113] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2014-10-06 14:32:13,527 [Worker-113] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-10-06 14:32:13,528 [Worker-113] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/andreaberglund/Dropbox/C3L/Websockets/Angular-Sockets-Exercise/socket-server/src/test/resources
+2014-10-06 14:37:04,027 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-10-06 14:37:04,041 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2014-10-06 14:37:04,068 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-10-06 14:37:04,068 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/andreaberglund/Dropbox/C3L/Websockets/Angular-Sockets-Exercise/socket-server/src/test/resources
+2014-10-06 14:37:46,010 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-10-06 14:37:46,018 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2014-10-06 14:37:46,026 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-10-06 14:37:46,026 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/andreaberglund/Dropbox/C3L/Websockets/Angular-Sockets-Exercise/socket-server/src/test/resources
+2014-10-06 14:38:07,555 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-10-06 14:38:07,557 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2014-10-06 14:38:07,562 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-10-06 14:38:07,562 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/andreaberglund/Dropbox/C3L/Websockets/Angular-Sockets-Exercise/socket-server/src/test/resources
+2014-10-07 09:39:38,993 [Worker-43] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-10-07 09:39:38,996 [Worker-43] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2014-10-07 09:39:39,001 [Worker-43] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-10-07 09:39:39,001 [Worker-43] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/andreaberglund/Dropbox/C3L/Websockets/Angular-Sockets-Exercise/socket-server/src/test/resources
+2014-10-07 09:45:00,457 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-10-07 09:45:00,459 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2014-10-07 09:45:00,463 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-10-07 09:45:00,463 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/andreaberglund/Dropbox/C3L/Websockets/Angular-Sockets-Exercise/socket-server/src/test/resources
+2014-10-07 09:45:03,411 [Worker-46] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-10-07 09:45:03,412 [Worker-46] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2014-10-07 09:45:03,416 [Worker-46] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-10-07 09:45:03,416 [Worker-46] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/andreaberglund/Dropbox/C3L/Websockets/Angular-Sockets-Exercise/socket-server/src/test/resources
+2014-10-07 09:45:34,930 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-10-07 09:45:34,931 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2014-10-07 09:45:34,935 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-10-07 09:45:34,936 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/andreaberglund/Dropbox/C3L/Websockets/Angular-Sockets-Exercise/socket-server/src/test/resources

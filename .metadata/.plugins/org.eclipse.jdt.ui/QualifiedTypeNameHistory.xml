@@ -26,7 +26,6 @@
 <fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="se.berglund.models.Category"/>
 <fullyQualifiedTypeName name="se.berglund.datastorage.CurrentWhiteboardManager"/>
-<fullyQualifiedTypeName name="se.berglund.datastorage.CategoryManager"/>
 <fullyQualifiedTypeName name="se.berglund.datastorage.PostitManager"/>
 <fullyQualifiedTypeName name="javax.json.JsonValue"/>
 <fullyQualifiedTypeName name="javax.json.Json"/>
@@ -35,4 +34,5 @@
 <fullyQualifiedTypeName name="java.io.StringReader"/>
 <fullyQualifiedTypeName name="javax.json.JsonObject"/>
 <fullyQualifiedTypeName name="se.berglund.models.Postit"/>
+<fullyQualifiedTypeName name="se.berglund.datastorage.CategoryManager"/>
 </qualifiedTypeNameHistroy>

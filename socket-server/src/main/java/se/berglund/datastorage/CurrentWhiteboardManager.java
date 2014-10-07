@@ -11,13 +11,8 @@ import se.berglund.models.Category;
 import se.berglund.models.Postit;
 
 public class CurrentWhiteboardManager {
-
-	// THREAD SECURITY for maps
-
+	
 	private int currentWhiteboardId;
-
-	public CurrentWhiteboardManager() {
-	}
 
 	public CurrentWhiteboardManager(int id) {
 		this.setCurrentWhiteboardId(id);
@@ -45,7 +40,6 @@ public class CurrentWhiteboardManager {
 		@SuppressWarnings("unchecked")
 		ArrayList<Category> categories = (ArrayList<Category>) query.list();
 		tr.commit();
-
 		return categories;
 
 	}

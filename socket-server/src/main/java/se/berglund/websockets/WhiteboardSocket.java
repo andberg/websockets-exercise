@@ -8,7 +8,7 @@ import javax.websocket.OnOpen;
 import javax.websocket.Session;
 import javax.websocket.server.ServerEndpoint;
 
-import se.berglund.messagehandlers.MessageHandler;
+import se.berglund.messagehandler.MessageHandler;
 import se.berglund.models.Message;
 
 @ServerEndpoint(value = "/whiteboards", encoders = { JsonEncoder.class }, decoders = { JsonDecoder.class })

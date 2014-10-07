@@ -1,0 +1,59 @@
+package se.berglund.datastorage;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+
+import se.berglund.models.Category;
+import se.berglund.models.Postit;
+
+public class CategoryManager {
+	
+	public CategoryManager(){}
+	
+	public void updateCategory(Category category) {
+		SessionFactory sessFactory = HibernateSessionFactory
+				.getSessionFactory();
+		Session session = sessFactory.openSession();
+		Transaction tr = session.beginTransaction();
+		session.update(category);
+		tr.commit();
+		
+		System.out.println("Updated category " + category.getName());
+	}
+
+	public void createCategory(Category category) {
+		SessionFactory sessFactory = HibernateSessionFactory
+				.getSessionFactory();
+		Session session = sessFactory.openSession();
+		Transaction tr = session.beginTransaction();
+		session.save(category);
+		tr.commit();
+		System.out.println("Created category " + category.getName());
+	}
+
+	public void deleteCategory(Category category) {
+
+		SessionFactory sessFactory = HibernateSessionFactory
+				.getSessionFactory();
+		Session session = sessFactory.openSession();
+		Transaction tr = session.beginTransaction();
+
+		if (category.getPostits().iterator().hasNext()) {
+			System.out.println("Har postits!");
+			SessionFactory sessionFactory = HibernateSessionFactory
+					.getSessionFactory();
+			Session sessionPostit = sessionFactory.openSession();
+			Transaction transaction = sessionPostit.beginTransaction();
+
+			for (Postit post : category.getPostits()) {
+				sessionPostit.delete(post);
+			}
+			transaction.commit();
+		}
+
+		session.delete(category);
+		tr.commit();
+		System.out.println("Deleted category " + category.getName());
+	}
+}

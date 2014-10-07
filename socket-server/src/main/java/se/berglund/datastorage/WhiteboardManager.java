@@ -1,9 +1,6 @@
 package se.berglund.datastorage;
 
 import java.util.ArrayList;
-import java.util.List;
-
-import javax.transaction.Transactional;
 
 import org.hibernate.Query;
 import org.hibernate.Session;
@@ -14,11 +11,21 @@ import se.berglund.models.Whiteboard;
 
 public class WhiteboardManager {
 
-	public WhiteboardManager() {
+	private static WhiteboardManager firstInstance = null;
+
+	private WhiteboardManager() {
 	}
 
-	@SuppressWarnings("unchecked")
-	@Transactional
+	public static WhiteboardManager getInstance() {
+		synchronized (WhiteboardManager.class) {
+
+			if (firstInstance == null) {
+				firstInstance = new WhiteboardManager();
+			}
+			return firstInstance;
+		}
+	}
+
 	public ArrayList<Whiteboard> getAllWhiteboards() {
 
 		SessionFactory sessFactory = HibernateSessionFactory
@@ -26,14 +33,13 @@ public class WhiteboardManager {
 		Session session = sessFactory.openSession();
 		Transaction tr = session.beginTransaction();
 
-		String strSql = "from Whiteboard w";
-		Query query = session.createQuery(strSql);
-		@SuppressWarnings("rawtypes")
-		List whiteboards = query.list();
+		String selectSQL = "from Whiteboard w";
+		Query query = session.createQuery(selectSQL);
+		@SuppressWarnings("unchecked")
+		ArrayList<Whiteboard> whiteboards = (ArrayList<Whiteboard>) query
+				.list();
 
 		tr.commit();
-		System.out.println("GET all Whiteboards");
-
 		return (ArrayList<Whiteboard>) whiteboards;
 	}
 
@@ -45,9 +51,6 @@ public class WhiteboardManager {
 
 		session.save(whiteboard);
 		tr.commit();
-
-		System.out.println("Create new Whiteboard " + whiteboard.getName());
-
 	}
 
 	public void deleteWhiteboard(Whiteboard whiteboard) {
@@ -57,8 +60,6 @@ public class WhiteboardManager {
 		Transaction tr = session.beginTransaction();
 		session.delete(whiteboard);
 		tr.commit();
-
-		System.out.println("Deleted Whiteboard " + whiteboard.getName());
 	}
 
 }

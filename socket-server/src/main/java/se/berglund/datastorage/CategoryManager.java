@@ -9,6 +9,9 @@ import se.berglund.models.Postit;
 
 public class CategoryManager {
 
+	public CategoryManager() {
+	}
+
 	public void updateCategory(Category category) {
 		SessionFactory sessFactory = HibernateSessionFactory
 				.getSessionFactory();
@@ -16,8 +19,6 @@ public class CategoryManager {
 		Transaction tr = session.beginTransaction();
 		session.update(category);
 		tr.commit();
-		
-		System.out.println("Updated category " + category.getName());
 	}
 
 	public void createCategory(Category category) {
@@ -27,7 +28,6 @@ public class CategoryManager {
 		Transaction tr = session.beginTransaction();
 		session.save(category);
 		tr.commit();
-		System.out.println("Created category " + category.getName());
 	}
 
 	public void deleteCategory(Category category) {
@@ -38,7 +38,6 @@ public class CategoryManager {
 		Transaction tr = session.beginTransaction();
 
 		if (category.getPostits().iterator().hasNext()) {
-			System.out.println("Har postits!");
 			SessionFactory sessionFactory = HibernateSessionFactory
 					.getSessionFactory();
 			Session sessionPostit = sessionFactory.openSession();
@@ -52,6 +51,5 @@ public class CategoryManager {
 
 		session.delete(category);
 		tr.commit();
-		System.out.println("Deleted category " + category.getName());
 	}
 }

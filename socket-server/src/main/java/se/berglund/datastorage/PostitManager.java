@@ -7,7 +7,10 @@ import org.hibernate.Transaction;
 import se.berglund.models.Postit;
 
 public class PostitManager {
-	public void updatePostit(Postit postit){
+	public PostitManager() {
+	}
+
+	public void updatePostit(Postit postit) {
 		SessionFactory sessFactory = HibernateSessionFactory
 				.getSessionFactory();
 		Session session = sessFactory.openSession();
@@ -15,8 +18,8 @@ public class PostitManager {
 		session.update(postit);
 		tr.commit();
 	}
-	
-	public void deletePostit(Postit postit){
+
+	public void deletePostit(Postit postit) {
 		SessionFactory sessFactory = HibernateSessionFactory
 				.getSessionFactory();
 		Session session = sessFactory.openSession();
@@ -25,7 +28,7 @@ public class PostitManager {
 		tr.commit();
 	}
 
-	public void createPostit(Postit postit){
+	public void createPostit(Postit postit) {
 		SessionFactory sessFactory = HibernateSessionFactory
 				.getSessionFactory();
 		Session session = sessFactory.openSession();

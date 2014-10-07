@@ -149,3 +149,15 @@ INFO: XNIO version 3.2.0.Final
 INFO: XNIO NIO Implementation Version 3.2.0.Final
 2014-10-06 11:15:22,109 ERROR [Worker-25] - System.err - Oct 06, 2014 11:15:22 AM org.jboss.remoting3.EndpointImpl <clinit>
 INFO: JBoss Remoting version (unknown)
+2014-10-06 14:38:22,022 ERROR [Worker-11] - System.err - Oct 06, 2014 2:38:22 PM org.xnio.Xnio <clinit>
+INFO: XNIO version 3.1.0.Final
+2014-10-06 14:38:22,037 ERROR [Worker-11] - System.err - Oct 06, 2014 2:38:22 PM org.xnio.nio.NioXnio <clinit>
+INFO: XNIO NIO Implementation Version 3.1.0.Final
+2014-10-06 14:38:22,062 ERROR [Worker-11] - System.err - Oct 06, 2014 2:38:22 PM org.jboss.remoting3.EndpointImpl <clinit>
+INFO: JBoss Remoting version 4.0.0.Beta1
+2014-10-07 09:39:45,227 ERROR [Worker-43] - System.err - Oct 07, 2014 9:39:45 AM org.xnio.Xnio <clinit>
+INFO: XNIO version 3.2.0.Final
+2014-10-07 09:39:45,260 ERROR [Worker-43] - System.err - Oct 07, 2014 9:39:45 AM org.xnio.nio.NioXnio <clinit>
+INFO: XNIO NIO Implementation Version 3.2.0.Final
+2014-10-07 09:39:45,332 ERROR [Worker-43] - System.err - Oct 07, 2014 9:39:45 AM org.jboss.remoting3.EndpointImpl <clinit>
+INFO: JBoss Remoting version (unknown)
