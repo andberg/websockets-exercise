@@ -1,3 +1,9 @@
 1412596833590	Rename local variable 'wb'
 1412596853057	Rename local variable 'wb'
 1412597819378	Rename package 'se.berglund.messagehandlers'
+1412673908711	Move method
+1412673946927	Move method
+1412681278182	Encapsulate field 'id'
+1412681286777	Encapsulate field 'whiteboardId'
+1412682710927	Encapsulate field 'session'
+1412754697121	Delete element

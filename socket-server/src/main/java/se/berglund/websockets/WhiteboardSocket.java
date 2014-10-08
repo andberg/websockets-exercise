@@ -1,5 +1,9 @@
 package se.berglund.websockets;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 import javax.websocket.CloseReason;
 import javax.websocket.OnClose;
 import javax.websocket.OnError;
@@ -9,23 +13,30 @@ import javax.websocket.Session;
 import javax.websocket.server.ServerEndpoint;
 
 import se.berglund.messagehandler.MessageHandler;
+import se.berglund.models.Client;
 import se.berglund.models.Message;
+
+/* Websocket connection to Angular Floggit Whiteboard application
+ * Localhost/9000/# */
 
 @ServerEndpoint(value = "/whiteboards", encoders = { JsonEncoder.class }, decoders = { JsonDecoder.class })
 public class WhiteboardSocket {
 
+	List<Client> clients = Collections
+			.synchronizedList(new ArrayList<Client>());
+
 	@OnOpen
 	public void myOnOpen(Session session) {
-		System.out.println("WhiteboardSocket connected, session id: "
-				+ session.getId().toString());
+		Client client = new Client(session);
+		clients.add(client);
 	}
 
 	@OnMessage
 	public void myOnMessage(Session session, Message message) {
-		System.out.println(message.getData()); 
-		MessageHandler messageHandler = new MessageHandler(message); 
-		Message handeldMessage = messageHandler.handleMessage(); 
-		
+
+		MessageHandler messageHandler = new MessageHandler(message);
+		Message handeldMessage = messageHandler.handleMessage();
+
 		for (Session s : session.getOpenSessions()) {
 			if (s.isOpen()) {
 				s.getAsyncRemote().sendObject(handeldMessage);

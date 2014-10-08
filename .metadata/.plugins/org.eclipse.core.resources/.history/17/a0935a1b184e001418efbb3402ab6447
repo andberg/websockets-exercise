@@ -1,0 +1,26 @@
+package se.berglund.models;
+
+public class Client {
+	private long id; 
+	private int whiteboardId;
+	
+	public Client(long id, int whiteboardId){
+		this.id = id; 
+		this.whiteboardId = whiteboardId;
+	}
+
+	
+	public long getId() {
+		return id;
+	}
+	public void setId(long id) {
+		this.id = id;
+	}
+	public int getWhiteboardId() {
+		return whiteboardId;
+	}
+	public void setWhiteboardId(int whiteboardId) {
+		this.whiteboardId = whiteboardId;
+	} 
+	
+}

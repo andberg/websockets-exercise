@@ -1,0 +1,17 @@
+package se.berglund.datastorage;
+
+public class ClientManager {
+	
+	private static ClientManager firstInstance = null; 
+	private ClientManager(){}
+	public static ClientManager getInstance() {
+		synchronized (ClientManager.class) {
+
+			if (firstInstance == null) {
+				firstInstance = new ClientManager();
+			}
+			return firstInstance;
+		}
+	}
+
+}

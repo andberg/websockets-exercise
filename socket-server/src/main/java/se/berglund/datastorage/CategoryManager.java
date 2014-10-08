@@ -7,20 +7,30 @@ import org.hibernate.Transaction;
 import se.berglund.models.Category;
 import se.berglund.models.Postit;
 
+/* CategoryManager-class takes a Category from the MessageHandler
+ * and contact the MySQL database via Hibernate 
+ * and can execute CUD-functionality. 
+ * */
+
 public class CategoryManager {
 
-	private static CategoryManager firstInstance = null;
-
-	private CategoryManager() {
+	public CategoryManager() {
 	}
 
-	public static CategoryManager getInstance() {
-		synchronized (CategoryManager.class) {
+	public void createCategory(Category category) {
+		SessionFactory sessFactory = HibernateSessionFactory
+				.getSessionFactory();
+		Session session = sessFactory.openSession();
+		Transaction tr = session.beginTransaction();
 
-			if (firstInstance == null) {
-				firstInstance = new CategoryManager();
-			}
-			return firstInstance;
+		try {
+			session.save(category);
+			tr.commit();
+		} catch (Exception e) {
+			e.printStackTrace();
+			tr.rollback();
+		} finally {
+			session.close();
 		}
 	}
 
@@ -33,23 +43,6 @@ public class CategoryManager {
 
 		try {
 			session.update(category);
-			tr.commit();
-		} catch (Exception e) {
-			e.printStackTrace();
-			tr.rollback();
-		} finally {
-			session.close();
-		}
-	}
-
-	public void createCategory(Category category) {
-		SessionFactory sessFactory = HibernateSessionFactory
-				.getSessionFactory();
-		Session session = sessFactory.openSession();
-		Transaction tr = session.beginTransaction();
-
-		try {
-			session.save(category);
 			tr.commit();
 		} catch (Exception e) {
 			e.printStackTrace();

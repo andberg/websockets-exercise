@@ -1,0 +1,48 @@
+package se.berglund.models;
+
+import java.util.ArrayList;
+import java.util.Collections;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+/* POJO representation of a Whiteboard from Database */
+
+@Entity
+@Table(name="whiteboards")
+public final class Whiteboard {
+	@Id
+	@GeneratedValue 
+	private int id;
+	private String name;
+	public ArrayList<Client> clients = (ArrayList<Client>) Collections.synchronizedList(new ArrayList<Client>()); 
+
+	public Whiteboard(String name) {
+		this.name = name;
+	}
+
+	public Whiteboard() {
+	};
+
+	public int getId() {
+		return id; 
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String toString(){
+		return "Whiteboard: ID: " + this.getId() + " NAME " + this.getName(); 
+	}
+}

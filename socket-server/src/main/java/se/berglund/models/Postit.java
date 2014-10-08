@@ -6,6 +6,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+/* POJO representation of a Postit from Database */
+
 @Entity
 @Table(name="postits")
 public final class Postit {

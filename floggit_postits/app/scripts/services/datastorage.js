@@ -39,10 +39,10 @@ angular.module('floggitPostitsApp')
         $rootScope.$broadcast('set-current-whiteboard', categoriesWithPostits);
       }
       if (jsonResponse.type === 'delete-category' || jsonResponse.type === 'create-category' || jsonResponse.type === 'update-category' || jsonResponse.type === 'create-postit' || jsonResponse.type === 'update-postit' || jsonResponse.type === 'delete-postit') {
-        $rootScope.$broadcast('data-updated', 'trigger refresh');
         if (jsonResponse.type === 'create-postit') {
-          $rootScope.$broadcast('reset-form', 'trigger refresh');
+          $rootScope.$broadcast('reset-form');
         }
+        $rootScope.$broadcast('data-updated', 'trigger refresh');
       }
     };
 

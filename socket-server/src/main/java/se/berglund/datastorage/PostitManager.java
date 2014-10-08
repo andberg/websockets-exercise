@@ -6,20 +6,32 @@ import org.hibernate.Transaction;
 
 import se.berglund.models.Postit;
 
+/* PostitManager-class takes a Postit from the MessageHandler
+ * and contact the MySQL database via Hibernate 
+ * and can execute CUD-functionality. 
+ * */
+
 public class PostitManager {
 
-	private static PostitManager firstInstance = null;
 
-	private PostitManager() {
+	public PostitManager() {
 	}
 
-	public static PostitManager getInstance() {
-		synchronized (CurrentWhiteboardManager.class) {
-
-			if (firstInstance == null) {
-				firstInstance = new PostitManager();
-			}
-			return firstInstance;
+	
+	public void createPostit(Postit postit) {
+		SessionFactory sessFactory = HibernateSessionFactory
+				.getSessionFactory();
+		Session session = sessFactory.openSession();
+		Transaction tr = session.beginTransaction();
+	
+		try {
+			session.save(postit);
+			tr.commit();
+		} catch (Exception e) {
+			e.printStackTrace();
+			tr.rollback();
+		} finally {
+			session.close();
 		}
 	}
 
@@ -48,23 +60,6 @@ public class PostitManager {
 
 		try {
 			session.delete(postit);
-			tr.commit();
-		} catch (Exception e) {
-			e.printStackTrace();
-			tr.rollback();
-		} finally {
-			session.close();
-		}
-	}
-
-	public void createPostit(Postit postit) {
-		SessionFactory sessFactory = HibernateSessionFactory
-				.getSessionFactory();
-		Session session = sessFactory.openSession();
-		Transaction tr = session.beginTransaction();
-
-		try {
-			session.save(postit);
 			tr.commit();
 		} catch (Exception e) {
 			e.printStackTrace();

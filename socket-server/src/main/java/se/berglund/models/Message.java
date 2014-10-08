@@ -2,6 +2,8 @@ package se.berglund.models;
 
 import javax.json.JsonArray;
 
+/* A POJO created from the String Json Object from client-side */
+
 public class Message {
 	private String type;
 	private JsonArray data;

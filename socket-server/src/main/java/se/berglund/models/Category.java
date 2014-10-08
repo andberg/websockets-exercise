@@ -1,5 +1,9 @@
 package se.berglund.models;
 
+/* POJO representation of a Category from Database 
+ * plus functionality for storing corresponding postits in array
+ * */
+
 import java.util.ArrayList;
 
 import javax.persistence.Entity;

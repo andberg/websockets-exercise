@@ -18,6 +18,11 @@ import se.berglund.models.Message;
 import se.berglund.models.Postit;
 import se.berglund.models.Whiteboard;
 
+/* This class takes a message from a client and parses 
+ * it to it's corresponding POJO and then 
+ * passes it on to it's corresponding Manager.
+ */
+
 public class MessageHandler {
 	private Message message;
 
@@ -27,37 +32,41 @@ public class MessageHandler {
 
 	public Message handleMessage() {
 
-		// Redirect to WhiteboardManager, to get all whiteboards, create a
-		// whiteboard or delete one.
+		// Redirect to WhiteboardManager
 
 		if (message.getType().contains("whiteboard")) {
 			Whiteboard whiteboard = new Whiteboard();
-			WhiteboardManager whiteboardManager = WhiteboardManager.getInstance(); 
+			WhiteboardManager whiteboardManager = WhiteboardManager
+					.getInstance();
 
 			if (message.getType().contains("get-all-whiteboards")) {
-				ArrayList<Whiteboard> allWhiteboards = whiteboardManager.getAllWhiteboards();
+				ArrayList<Whiteboard> allWhiteboards = whiteboardManager
+						.getAllWhiteboards();
 				JsonArray allWhiteboardsToJson = parseWhiteboardArrayToJsonArray(allWhiteboards);
 				message.setData(allWhiteboardsToJson);
 			}
 
 			if (message.getType().contains("create-whiteboard")) {
-				whiteboard.setName( message.getData().getJsonObject(0)
+				whiteboard.setName(message.getData().getJsonObject(0)
 						.getString("name"));
-				whiteboardManager.addWhiteboard(whiteboard);
+				whiteboardManager.createWhiteboard(whiteboard);
 			}
 
 			if (message.getType().contains("delete-whiteboard")) {
-				whiteboard.setId(Integer.parseInt(message.getData().getJsonObject(0).getString("id")));
+				whiteboard.setId(Integer.parseInt(message.getData()
+						.getJsonObject(0).getString("id")));
 				whiteboardManager.deleteWhiteboard(whiteboard);
 			}
 		}
 
-		// Redirect to CurrentWhiteboardManager where we get categories an postits for current whiteboard
-		// First as arraylists and ten as json. 
+		// Redirect to CurrentWhiteboardManager
 
 		if (message.getType().contains("get-current-whiteboard")) {
-			CurrentWhiteboardManager cwm = CurrentWhiteboardManager.getInstance(); 
-			cwm.setCurrentWhiteboardId(Integer.parseInt(message.getData().getJsonObject(0).getString("id")));
+			
+			CurrentWhiteboardManager cwm = new CurrentWhiteboardManager(); 
+			
+			cwm.setCurrentWhiteboardId(Integer.parseInt(message.getData()
+					.getJsonObject(0).getString("id")));
 
 			ArrayList<Category> categoriesForWhiteboard = cwm
 					.getAllCategoriesForCurrentWhiteboard();
@@ -76,12 +85,12 @@ public class MessageHandler {
 
 		}
 
-		// Redirect to CategoryManager for full CRUD functionality
+		// Redirect to CategoryManager
 
 		if (message.getType().contains("category")) {
 
 			Category category = new Category();
-			CategoryManager categoryManager = CategoryManager.getInstance();
+			CategoryManager categoryManager = new CategoryManager();
 
 			if (message.getType().contains("create")) {
 				category.setWhiteboardId(Integer.parseInt(message.getData()
@@ -125,18 +134,18 @@ public class MessageHandler {
 			}
 		}
 
-		// Redirect to PostitManager for full CRUD functionality
+		// Redirect to PostitManager
 
 		if (message.getType().contains("postit")) {
-			PostitManager postitManager = PostitManager.getInstance(); 
+			PostitManager postitManager = new PostitManager();
 			Postit postit = new Postit();
 			if (message.getType().contains("create")) {
 				postit.setWhiteboardId(Integer.parseInt(message.getData()
 						.getJsonObject(0).getString("whiteboard")));
 			} else {
 				postit.setId(message.getData().getJsonObject(0).getInt("id"));
-				postit.setWhiteboardId(message.getData().getJsonObject(0)
-						.getInt("whiteboard"));
+				postit.setWhiteboardId(message.getData()
+						.getJsonObject(0).getInt("whiteboard"));
 			}
 			postit.setCategoryId(message.getData().getJsonObject(0)
 					.getInt("category"));
@@ -162,6 +171,9 @@ public class MessageHandler {
 
 		return message;
 	}
+
+	// Tool-box methods helping with parsing
+	// Objects and Arrays to JsonObjects and JsonArrays
 
 	private JsonArray parseWhiteboardArrayToJsonArray(
 			ArrayList<Whiteboard> whiteboards) {

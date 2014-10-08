@@ -20,6 +20,7 @@ angular.module('floggitPostitsApp')
 
         function getAllData() {
           dataStorage.getAll(currentWhiteboard.getId());
+          $scope.$apply();
         }
         getAllData();
         $scope.$on('set-current-whiteboard', function (event, data) {

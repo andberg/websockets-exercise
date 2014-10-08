@@ -10,31 +10,26 @@ import org.hibernate.Transaction;
 import se.berglund.models.Category;
 import se.berglund.models.Postit;
 
+/* CurrentWhiteboardManager-class manages functionality for 
+ * when currentWhiteboard is set from client-side. This class
+ * have methods to GET all data for current whiteboard by
+ * contacting the MySQL database via Hibernate.
+ * */
+
 public class CurrentWhiteboardManager {
 
 	private int currentWhiteboardId;
 
-	private static CurrentWhiteboardManager firstInstance = null;
-
-	private CurrentWhiteboardManager() {
+	public CurrentWhiteboardManager() {
 	}
 
-	public static CurrentWhiteboardManager getInstance() {
-		synchronized (CurrentWhiteboardManager.class) {
-
-			if (firstInstance == null) {
-				firstInstance = new CurrentWhiteboardManager();
-			}
-			return firstInstance;
-		}
-	}
 
 	public int getCurrentWhiteboardId() {
 		return currentWhiteboardId;
 	}
 
-	public void setCurrentWhiteboardId(int currentWhiteboardId) {
-		this.currentWhiteboardId = currentWhiteboardId;
+	public void setCurrentWhiteboardId(int id) {
+		currentWhiteboardId = id;
 	}
 
 	public ArrayList<Category> getAllCategoriesForCurrentWhiteboard() {
@@ -52,12 +47,12 @@ public class CurrentWhiteboardManager {
 			ArrayList<Category> categories = (ArrayList<Category>) query.list();
 			tr.commit();
 			return categories;
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 			tr.rollback();
 			return null;
-			
+
 		} finally {
 			session.close();
 		}
@@ -74,19 +69,19 @@ public class CurrentWhiteboardManager {
 			Query query = session
 					.createQuery("from Postit p WHERE whiteboardId = :id ");
 			query.setParameter("id", currentWhiteboardId);
-			
+
 			@SuppressWarnings("unchecked")
 			ArrayList<Postit> postits = (ArrayList<Postit>) query.list();
 			tr.commit();
 			return postits;
 
-		} catch (Exception e){
+		} catch (Exception e) {
 			e.printStackTrace();
 			tr.rollback();
-			return null; 
-			
+			return null;
+
 		} finally {
-			session.close(); 
+			session.close();
 		}
 	}
 

@@ -1,0 +1,8 @@
+package se.berglund.datastorage;
+
+public class ClientManager {
+	
+	private static ClientManager firstInstanceOf = null; 
+	private ClientManager(){}
+
+}
