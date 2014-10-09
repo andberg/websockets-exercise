@@ -9,7 +9,7 @@
  */
 
 angular.module('floggitPostitsApp')
-  .factory('dataStorage', function ($rootScope) {
+  .factory('dataStorage', function ($rootScope, currentWhiteboard) {
 
     var url = 'ws://localhost:8080/socket-server/whiteboards';
     var websocket = new WebSocket(url);
@@ -24,33 +24,48 @@ angular.module('floggitPostitsApp')
     websocket.onmessage = function (response) {
       console.log(response.data);
       var jsonResponse = JSON.parse(response.data);
+
+
       if (jsonResponse.type === 'get-all-whiteboards') {
         $rootScope.$broadcast('get-all-whiteboards', jsonResponse.dataArray);
       }
       if (jsonResponse.type === 'create-whiteboard' || jsonResponse.type === 'delete-whiteboard') {
         $rootScope.$broadcast('create-delete-whiteboard');
       }
-      if (jsonResponse.type === 'get-current-whiteboard') {
-        var categories = [];
-        var postits = [];
-        categories = jsonResponse.dataArray[0];
-        postits = jsonResponse.dataArray[1];
-        var categoriesWithPostits = sortPostitsIntoCategories(categories, postits);
-        $rootScope.$broadcast('set-current-whiteboard', categoriesWithPostits);
-      }
-      if (jsonResponse.type === 'delete-category' || jsonResponse.type === 'create-category' || jsonResponse.type === 'update-category' || jsonResponse.type === 'create-postit' || jsonResponse.type === 'update-postit' || jsonResponse.type === 'delete-postit') {
-        if (jsonResponse.type === 'create-postit') {
-          $rootScope.$broadcast('reset-form');
+
+      if (jsonResponse.whiteboard === parseInt(currentWhiteboard.getId())) {
+        if (jsonResponse.type === 'get-current-whiteboard') {
+          var categories = [];
+          var postits = [];
+          categories = jsonResponse.dataArray[0];
+          postits = jsonResponse.dataArray[1];
+          var categoriesWithPostits = sortPostitsIntoCategories(categories, postits);
+          $rootScope.$broadcast('set-current-whiteboard', categoriesWithPostits);
         }
-        $rootScope.$broadcast('data-updated', 'trigger refresh');
+        if (jsonResponse.type === 'delete-category' || jsonResponse.type === 'create-category' || jsonResponse.type === 'update-category' || jsonResponse.type === 'create-postit' || jsonResponse.type === 'update-postit' || jsonResponse.type === 'delete-postit') {
+          if (jsonResponse.type === 'create-postit') {
+            $rootScope.$broadcast('reset-form');
+          }
+          $rootScope.$broadcast('data-updated', 'trigger refresh');
+        }
       }
     };
 
     function sendSocketMessage(type, data) {
-      var message = {
-        type: type,
-        dataArray: [data]
-      };
+      var message;
+      if (type === 'get-all-whiteboards' ||  type === 'delete-whiteboard' ||  type === 'create-whiteboard') {
+        message = {
+          whiteboard: 0,
+          type: type,
+          dataArray: [data]
+        };
+      } else {
+        message = {
+          whiteboard: parseInt(currentWhiteboard.getId()),
+          type: type,
+          dataArray: [data]
+        };
+      }
       if (open) {
         websocket.send(JSON.stringify(message));
       }
@@ -111,7 +126,7 @@ angular.module('floggitPostitsApp')
 
     function getAll(whiteboardId) {
       var currentWhiteboard = {
-        id: whiteboardId
+        id: parseInt(whiteboardId)
       };
       return sendSocketMessage('get-current-whiteboard', currentWhiteboard);
     }

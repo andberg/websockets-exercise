@@ -36,11 +36,11 @@ public class Message {
 		return "WhiteboardId " + this.getWhiteboardId() + "Type: " + this.getType() + " Data: " + this.getData().toString(); 
 	}
 
-	public int getWhiteboardId() {
+	public String getWhiteboardId() {
 		return whiteboardId;
 	}
 
-	public void setWhiteboardId(int whiteboardId) {
+	public void setWhiteboardId(String whiteboardId) {
 		this.whiteboardId = whiteboardId;
 	}
 

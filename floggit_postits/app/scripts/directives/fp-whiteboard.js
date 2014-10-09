@@ -17,12 +17,18 @@ angular.module('floggitPostitsApp')
       controller: function ($scope, dataStorage, currentWhiteboard) {
 
         $scope.name = currentWhiteboard.getName();
+        var getAllOnce = true;
 
         function getAllData() {
           dataStorage.getAll(currentWhiteboard.getId());
           $scope.$apply();
         }
-        getAllData();
+
+        if (getAllOnce) {
+          getAllData();
+          getAllOnce = false;
+        }
+
         $scope.$on('set-current-whiteboard', function (event, data) {
           currentWhiteboard.setCategories(data);
           $scope.$apply();

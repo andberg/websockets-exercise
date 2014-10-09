@@ -65,8 +65,8 @@ public class MessageHandler {
 			
 			CurrentWhiteboardManager cwm = new CurrentWhiteboardManager(); 
 			
-			cwm.setCurrentWhiteboardId(message.getData()
-					.getJsonObject(0).getInt("id"));
+			cwm.setCurrentWhiteboardId(Integer.parseInt(message.getData()
+					.getJsonObject(0).getString("id")));
 
 			ArrayList<Category> categoriesForWhiteboard = cwm
 					.getAllCategoriesForCurrentWhiteboard();

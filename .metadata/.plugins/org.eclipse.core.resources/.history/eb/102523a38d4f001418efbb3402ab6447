@@ -40,7 +40,7 @@ public class Message {
 		return whiteboardId;
 	}
 
-	public void setWhiteboardId(int whiteboardId) {
+	public void setWhiteboardId(String whiteboardId) {
 		this.whiteboardId = whiteboardId;
 	}
 

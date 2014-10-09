@@ -2723,3 +2723,45 @@ Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.
 
 !ENTRY org.jboss.ide.eclipse.as.core 1 16973825 2014-10-08 09:59:03.050
 !MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2014-10-08 10:04:36.237
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2014-10-08 10:04:43.103
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16973825 2014-10-08 10:08:04.918
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-09 10:19:44.899
+!MESSAGE 7 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2014-10-09 10:19:45.725
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2014-10-09 10:19:52.670
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-09 10:23:18.443
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-09 10:23:56.350
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-09 10:24:01.505
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-09 10:24:06.210
+!MESSAGE 6 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-09 10:24:08.607
+!MESSAGE 6 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-09 10:29:39.707
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-09 10:29:45.713
+!MESSAGE 5 files modified in module socket-server
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-10-09 10:37:48.025
+!MESSAGE 5 files modified in module socket-server

@@ -7,7 +7,7 @@ import javax.json.JsonArray;
 public class Message {
 	private String type;
 	private JsonArray data;
-	private int whiteboardId; 
+	private String whiteboardId; 
 	
 	public Message(){
 	}; 
@@ -33,14 +33,14 @@ public class Message {
 	
 	@Override
 	public String toString(){
-		return "WhiteboardId " + this.getWhiteboardId() + "Type: " + this.getType() + " Data: " + this.getData().toString(); 
+		return "Type: " + this.getType() + " Data: " + this.getData().toString(); 
 	}
 
-	public int getWhiteboardId() {
+	public String getWhiteboardId() {
 		return whiteboardId;
 	}
 
-	public void setWhiteboardId(int whiteboardId) {
+	public void setWhiteboardId(String whiteboardId) {
 		this.whiteboardId = whiteboardId;
 	}
 

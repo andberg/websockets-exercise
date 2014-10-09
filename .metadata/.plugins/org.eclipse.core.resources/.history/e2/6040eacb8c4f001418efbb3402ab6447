@@ -23,7 +23,6 @@ public class JsonEncoder implements Text<Message> {
 	@Override
 	public String encode(Message message) throws EncodeException {
 		JsonObject jsonObject = Json.createObjectBuilder()
-				.add("whiteboard", message.getWhiteboardId())
 				.add("type", message.getType())
 				.add("dataArray", message.getData()).build();
 		return jsonObject.toString();

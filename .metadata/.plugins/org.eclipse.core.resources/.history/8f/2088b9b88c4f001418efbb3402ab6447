@@ -18,7 +18,6 @@ public class JsonDecoder implements Decoder.Text<Message> {
 		JsonObject jsonObject = Json
 				.createReader(new StringReader(jsonMessage)).readObject();
 		Message message = new Message();
-		message.setWhiteboardId(jsonObject.getInt("whiteboard"));
 		message.setType(jsonObject.getString("type"));
 		message.setData(jsonObject.getJsonArray("dataArray"));
 		return message;
