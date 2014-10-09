@@ -225,3 +225,53 @@ INFO: XNIO version 3.2.0.Final
 INFO: XNIO NIO Implementation Version 3.2.0.Final
 2014-10-09 11:04:08,513 ERROR [Worker-277] - System.err - Oct 09, 2014 11:04:08 AM org.jboss.remoting3.EndpointImpl <clinit>
 INFO: JBoss Remoting version (unknown)
+2014-10-09 18:47:53,348 ERROR [Worker-279] - System.err - Oct 09, 2014 6:47:53 PM org.xnio.Xnio <clinit>
+INFO: XNIO version 3.2.0.Final
+2014-10-09 18:47:53,378 ERROR [Worker-279] - System.err - Oct 09, 2014 6:47:53 PM org.xnio.nio.NioXnio <clinit>
+INFO: XNIO NIO Implementation Version 3.2.0.Final
+2014-10-09 18:47:53,439 ERROR [Worker-279] - System.err - Oct 09, 2014 6:47:53 PM org.jboss.remoting3.EndpointImpl <clinit>
+INFO: JBoss Remoting version (unknown)
+2014-10-09 18:52:49,808 ERROR [Worker-297] - System.err - Oct 09, 2014 6:52:49 PM org.xnio.Xnio <clinit>
+INFO: XNIO version 3.2.0.Final
+2014-10-09 18:52:49,829 ERROR [Worker-297] - System.err - Oct 09, 2014 6:52:49 PM org.xnio.nio.NioXnio <clinit>
+INFO: XNIO NIO Implementation Version 3.2.0.Final
+2014-10-09 18:52:49,874 ERROR [Worker-297] - System.err - Oct 09, 2014 6:52:49 PM org.jboss.remoting3.EndpointImpl <clinit>
+INFO: JBoss Remoting version (unknown)
+2014-10-09 18:53:38,278 ERROR [Remoting "endpoint" I/O-1] - System.err - Oct 09, 2014 6:53:38 PM org.jboss.remoting3.remote.RemoteConnection handleException
+ERROR: JBREM000200: Remote connection failed: java.io.IOException: Connection reset by peer
+2014-10-09 18:58:22,078 ERROR [Worker-290] - System.err - Oct 09, 2014 6:58:22 PM org.xnio.Xnio <clinit>
+INFO: XNIO version 3.2.0.Final
+2014-10-09 18:58:22,096 ERROR [Worker-290] - System.err - Oct 09, 2014 6:58:22 PM org.xnio.nio.NioXnio <clinit>
+INFO: XNIO NIO Implementation Version 3.2.0.Final
+2014-10-09 18:58:22,132 ERROR [Worker-290] - System.err - Oct 09, 2014 6:58:22 PM org.jboss.remoting3.EndpointImpl <clinit>
+INFO: JBoss Remoting version (unknown)
+2014-10-09 19:50:59,842 ERROR [Worker-323] - System.err - Oct 09, 2014 7:50:59 PM org.xnio.Xnio <clinit>
+INFO: XNIO version 3.2.0.Final
+2014-10-09 19:50:59,864 ERROR [Worker-323] - System.err - Oct 09, 2014 7:50:59 PM org.xnio.nio.NioXnio <clinit>
+INFO: XNIO NIO Implementation Version 3.2.0.Final
+2014-10-09 19:50:59,913 ERROR [Worker-323] - System.err - Oct 09, 2014 7:50:59 PM org.jboss.remoting3.EndpointImpl <clinit>
+INFO: JBoss Remoting version (unknown)
+2014-10-09 20:18:56,137 ERROR [Worker-333] - System.err - Oct 09, 2014 8:18:56 PM org.xnio.Xnio <clinit>
+INFO: XNIO version 3.2.0.Final
+2014-10-09 20:18:56,155 ERROR [Worker-333] - System.err - Oct 09, 2014 8:18:56 PM org.xnio.nio.NioXnio <clinit>
+INFO: XNIO NIO Implementation Version 3.2.0.Final
+2014-10-09 20:18:56,192 ERROR [Worker-333] - System.err - Oct 09, 2014 8:18:56 PM org.jboss.remoting3.EndpointImpl <clinit>
+INFO: JBoss Remoting version (unknown)
+2014-10-09 20:21:48,953 ERROR [Worker-338] - System.err - Oct 09, 2014 8:21:48 PM org.xnio.Xnio <clinit>
+INFO: XNIO version 3.2.0.Final
+2014-10-09 20:21:48,970 ERROR [Worker-338] - System.err - Oct 09, 2014 8:21:48 PM org.xnio.nio.NioXnio <clinit>
+INFO: XNIO NIO Implementation Version 3.2.0.Final
+2014-10-09 20:21:49,005 ERROR [Worker-338] - System.err - Oct 09, 2014 8:21:49 PM org.jboss.remoting3.EndpointImpl <clinit>
+INFO: JBoss Remoting version (unknown)
+2014-10-09 20:24:01,854 ERROR [Worker-328] - System.err - Oct 09, 2014 8:24:01 PM org.xnio.Xnio <clinit>
+INFO: XNIO version 3.2.0.Final
+2014-10-09 20:24:01,874 ERROR [Worker-328] - System.err - Oct 09, 2014 8:24:01 PM org.xnio.nio.NioXnio <clinit>
+INFO: XNIO NIO Implementation Version 3.2.0.Final
+2014-10-09 20:24:01,919 ERROR [Worker-328] - System.err - Oct 09, 2014 8:24:01 PM org.jboss.remoting3.EndpointImpl <clinit>
+INFO: JBoss Remoting version (unknown)
+2014-10-09 20:30:34,866 ERROR [Worker-339] - System.err - Oct 09, 2014 8:30:34 PM org.xnio.Xnio <clinit>
+INFO: XNIO version 3.2.0.Final
+2014-10-09 20:30:34,890 ERROR [Worker-339] - System.err - Oct 09, 2014 8:30:34 PM org.xnio.nio.NioXnio <clinit>
+INFO: XNIO NIO Implementation Version 3.2.0.Final
+2014-10-09 20:30:34,937 ERROR [Worker-339] - System.err - Oct 09, 2014 8:30:34 PM org.jboss.remoting3.EndpointImpl <clinit>
+INFO: JBoss Remoting version (unknown)

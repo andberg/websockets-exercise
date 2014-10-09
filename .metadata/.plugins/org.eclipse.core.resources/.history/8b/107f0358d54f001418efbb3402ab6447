@@ -30,6 +30,7 @@ public class JsonDecoder implements Decoder.Text<Message> {
 			Json.createReader(new StringReader(jsonMessage)).readObject();
 			return true;
 		} catch (Exception e) {
+			System.out.println("fel");
 			return false;
 		}
 	}

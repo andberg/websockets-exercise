@@ -19,6 +19,7 @@ angular.module('floggitPostitsApp')
 					$scope.allWhiteboards = dataStorage.getAllWhiteboards();
 				};
 				getAllWhiteboards();
+
 				$scope.createNewWhiteboard = function (newWhiteboard) {
 					var whiteboard = {
 						name: newWhiteboard

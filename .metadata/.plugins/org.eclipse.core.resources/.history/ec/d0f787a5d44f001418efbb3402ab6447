@@ -33,8 +33,7 @@ public class WhiteboardSocket {
 
 	@OnMessage
 	public void myOnMessage(Session session, Message message) {
-		System.out.println(message); 
-		
+
 		MessageHandler messageHandler = new MessageHandler(message);
 		Message handeldMessage = messageHandler.handleMessage();
 

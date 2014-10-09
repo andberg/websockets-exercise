@@ -44,10 +44,12 @@ angular.module('floggitPostitsApp')
           updatePostitColor();
         });
 
+        // Updates for color and catgeory 
+
         var updatePostitColor = function () {
           if ($scope.newColor !== undefined && $scope.newColor !== color) {
             $scope.postit.color = $scope.newColor;
-            color = $scope.newColor;
+            //color = $scope.newColor;
             dataStorage.updatePostit($scope.postit);
           }
         };
@@ -59,9 +61,10 @@ angular.module('floggitPostitsApp')
           }
         };
 
+        // Updates for Titel and Description
+
         $scope.updatePostit = function () {
           if ($scope.postit.title !== title || $scope.postit.description !== description) {
-            console.log($scope.postit);
             dataStorage.updatePostit($scope.postit);
             title = $scope.postit.title;
             description = $scope.postit.description;

@@ -21,7 +21,6 @@ angular.module('floggitPostitsApp')
 
         function getAllData() {
           dataStorage.getAll(currentWhiteboard.getId());
-          $scope.$apply();
         }
 
         if (getAllOnce) {

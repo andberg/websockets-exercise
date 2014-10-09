@@ -49,6 +49,7 @@ angular.module('floggitPostitsApp')
           if (jsonResponse.type === 'create-postit') {
             $rootScope.$broadcast('reset-form');
           }
+
           $rootScope.$broadcast('data-updated', 'trigger refresh');
         }
       }
