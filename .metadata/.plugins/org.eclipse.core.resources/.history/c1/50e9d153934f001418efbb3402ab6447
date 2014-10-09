@@ -62,11 +62,11 @@ public class MessageHandler {
 		// Redirect to CurrentWhiteboardManager
 
 		if (message.getType().contains("get-current-whiteboard")) {
-
-			CurrentWhiteboardManager cwm = new CurrentWhiteboardManager();
-
-			cwm.setCurrentWhiteboardId(message.getData().getJsonObject(0)
-					.getInt("id"));
+			
+			CurrentWhiteboardManager cwm = new CurrentWhiteboardManager(); 
+			
+			cwm.setCurrentWhiteboardId(message.getData()
+					.getJsonObject(0).getInt("id"));
 
 			ArrayList<Category> categoriesForWhiteboard = cwm
 					.getAllCategoriesForCurrentWhiteboard();
@@ -139,12 +139,14 @@ public class MessageHandler {
 		if (message.getType().contains("postit")) {
 			PostitManager postitManager = new PostitManager();
 			Postit postit = new Postit();
-			if(!message.getType().contains("create")){
+			if (message.getType().contains("create")) {
+				postit.setWhiteboardId(Integer.parseInt(message.getData()
+						.getJsonObject(0).getString("whiteboard")));
+			} else {
 				postit.setId(message.getData().getJsonObject(0).getInt("id"));
+				postit.setWhiteboardId(message.getData()
+						.getJsonObject(0).getInt("whiteboard"));
 			}
-			postit.setWhiteboardId(message.getData().getJsonObject(0)
-					.getInt("whiteboard"));
-
 			postit.setCategoryId(message.getData().getJsonObject(0)
 					.getInt("category"));
 			postit.setTitle(message.getData().getJsonObject(0)

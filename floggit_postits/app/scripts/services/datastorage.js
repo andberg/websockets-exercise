@@ -29,7 +29,10 @@ angular.module('floggitPostitsApp')
       if (jsonResponse.type === 'get-all-whiteboards') {
         $rootScope.$broadcast('get-all-whiteboards', jsonResponse.dataArray);
       }
-      if (jsonResponse.type === 'create-whiteboard' || jsonResponse.type === 'delete-whiteboard') {
+      if (jsonResponse.type === 'create-whiteboard') {
+        $rootScope.$broadcast('create-delete-whiteboard');
+      }
+      if (jsonResponse.type === 'delete-whiteboard') {
         $rootScope.$broadcast('create-delete-whiteboard');
       }
 

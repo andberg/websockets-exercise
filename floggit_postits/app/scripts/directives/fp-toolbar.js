@@ -41,7 +41,7 @@ angular.module('floggitPostitsApp')
               description: $scope.newPostit.description,
               category: $scope.newPostit.category.id,
               color: $scope.newPostit.color,
-              whiteboard: currentWhiteboard.getId()
+              whiteboard: parseInt(currentWhiteboard.getId())
             };
             dataStorage.createPostit(postit);
           }

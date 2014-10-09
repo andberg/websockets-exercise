@@ -3543,3 +3543,11 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact javax:javaee-
 2014-10-09 10:37:46,976 [Worker-261] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
 2014-10-09 10:37:46,979 [Worker-261] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2014-10-09 10:37:46,979 [Worker-261] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/andreaberglund/Dropbox/C3L/Websockets/Angular-Sockets-Exercise/socket-server/src/test/resources
+2014-10-09 11:04:51,512 [Worker-272] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-10-09 11:04:51,513 [Worker-272] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2014-10-09 11:04:51,517 [Worker-272] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-10-09 11:04:51,517 [Worker-272] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/andreaberglund/Dropbox/C3L/Websockets/Angular-Sockets-Exercise/socket-server/src/test/resources
+2014-10-09 11:06:43,364 [Worker-275] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-10-09 11:06:43,365 [Worker-275] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2014-10-09 11:06:43,368 [Worker-275] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-10-09 11:06:43,368 [Worker-275] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/andreaberglund/Dropbox/C3L/Websockets/Angular-Sockets-Exercise/socket-server/src/test/resources
