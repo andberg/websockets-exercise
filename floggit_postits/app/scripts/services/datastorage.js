@@ -58,8 +58,9 @@ angular.module('floggitPostitsApp')
     function sendSocketMessage(type, data) {
       var message;
       if (type === 'get-all-whiteboards' ||  type === 'delete-whiteboard' ||  type === 'create-whiteboard') {
+        currentWhiteboard.setId(0);
         message = {
-          whiteboard: 0,
+          whiteboard: parseInt(currentWhiteboard.getId()),
           type: type,
           dataArray: [data]
         };

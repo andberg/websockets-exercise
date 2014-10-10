@@ -139,7 +139,7 @@ public class MessageHandler {
 		if (message.getType().contains("postit")) {
 			PostitManager postitManager = new PostitManager();
 			Postit postit = new Postit();
-			if (!message.getType().contains("create")) {
+			if(!message.getType().contains("create")){
 				postit.setId(message.getData().getJsonObject(0).getInt("id"));
 			}
 			postit.setWhiteboardId(message.getData().getJsonObject(0)
@@ -149,10 +149,8 @@ public class MessageHandler {
 					.getInt("category"));
 			postit.setTitle(message.getData().getJsonObject(0)
 					.getString("title"));
-			if (message.getData().getJsonObject(0).getString("description") != null) {
-				postit.setDescription(message.getData().getJsonObject(0)
-						.getString("description"));
-			}
+			postit.setDescription(message.getData().getJsonObject(0)
+					.getString("description"));
 			postit.setColor(message.getData().getJsonObject(0)
 					.getString("color"));
 

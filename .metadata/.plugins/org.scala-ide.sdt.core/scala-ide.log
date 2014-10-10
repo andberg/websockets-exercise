@@ -275,3 +275,29 @@ INFO: XNIO version 3.2.0.Final
 INFO: XNIO NIO Implementation Version 3.2.0.Final
 2014-10-09 20:30:34,937 ERROR [Worker-339] - System.err - Oct 09, 2014 8:30:34 PM org.jboss.remoting3.EndpointImpl <clinit>
 INFO: JBoss Remoting version (unknown)
+2014-10-09 20:38:40,469 ERROR [Worker-345] - System.err - Oct 09, 2014 8:38:40 PM org.xnio.Xnio <clinit>
+INFO: XNIO version 3.2.0.Final
+2014-10-09 20:38:40,501 ERROR [Worker-345] - System.err - Oct 09, 2014 8:38:40 PM org.xnio.nio.NioXnio <clinit>
+INFO: XNIO NIO Implementation Version 3.2.0.Final
+2014-10-09 20:38:40,568 ERROR [Worker-345] - System.err - Oct 09, 2014 8:38:40 PM org.jboss.remoting3.EndpointImpl <clinit>
+INFO: JBoss Remoting version (unknown)
+2014-10-10 08:46:21,484 ERROR [Worker-387] - System.err - Oct 10, 2014 8:46:21 AM org.xnio.Xnio <clinit>
+INFO: XNIO version 3.2.0.Final
+2014-10-10 08:46:21,501 ERROR [Worker-387] - System.err - Oct 10, 2014 8:46:21 AM org.xnio.nio.NioXnio <clinit>
+INFO: XNIO NIO Implementation Version 3.2.0.Final
+2014-10-10 08:46:21,537 ERROR [Worker-387] - System.err - Oct 10, 2014 8:46:21 AM org.jboss.remoting3.EndpointImpl <clinit>
+INFO: JBoss Remoting version (unknown)
+2014-10-10 08:52:52,984 ERROR [Worker-386] - System.err - Oct 10, 2014 8:52:52 AM org.xnio.Xnio <clinit>
+INFO: XNIO version 3.2.0.Final
+2014-10-10 08:52:53,007 ERROR [Worker-386] - System.err - Oct 10, 2014 8:52:53 AM org.xnio.nio.NioXnio <clinit>
+INFO: XNIO NIO Implementation Version 3.2.0.Final
+2014-10-10 08:52:53,043 ERROR [Worker-386] - System.err - Oct 10, 2014 8:52:53 AM org.jboss.remoting3.EndpointImpl <clinit>
+INFO: JBoss Remoting version (unknown)
+2014-10-10 09:18:46,865 ERROR [Remoting "endpoint" I/O-1] - System.err - Oct 10, 2014 9:18:46 AM org.jboss.remoting3.remote.RemoteConnection handleException
+ERROR: JBREM000200: Remote connection failed: java.io.IOException: Connection reset by peer
+2014-10-10 09:19:09,634 ERROR [Worker-401] - System.err - Oct 10, 2014 9:19:09 AM org.xnio.Xnio <clinit>
+INFO: XNIO version 3.2.0.Final
+2014-10-10 09:19:09,661 ERROR [Worker-401] - System.err - Oct 10, 2014 9:19:09 AM org.xnio.nio.NioXnio <clinit>
+INFO: XNIO NIO Implementation Version 3.2.0.Final
+2014-10-10 09:19:09,712 ERROR [Worker-401] - System.err - Oct 10, 2014 9:19:09 AM org.jboss.remoting3.EndpointImpl <clinit>
+INFO: JBoss Remoting version (unknown)

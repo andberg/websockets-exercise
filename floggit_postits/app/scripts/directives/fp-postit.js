@@ -49,7 +49,7 @@ angular.module('floggitPostitsApp')
         var updatePostitColor = function () {
           if ($scope.newColor !== undefined && $scope.newColor !== color) {
             $scope.postit.color = $scope.newColor;
-            //color = $scope.newColor;
+            color = $scope.newColor;
             dataStorage.updatePostit($scope.postit);
           }
         };

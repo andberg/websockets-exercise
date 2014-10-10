@@ -14,7 +14,7 @@ angular.module('floggitPostitsApp')
       scope: {
         name: '='
       },
-      controller: function ($scope, dataStorage, currentWhiteboard) {
+      controller: function ($scope, $timeout, dataStorage, currentWhiteboard) {
 
         $scope.name = currentWhiteboard.getName();
         var getAllOnce = true;
@@ -30,7 +30,9 @@ angular.module('floggitPostitsApp')
 
         $scope.$on('set-current-whiteboard', function (event, data) {
           currentWhiteboard.setCategories(data);
-          $scope.$apply();
+          $timeout(function () {
+            $scope.$apply();
+          });
         });
 
         $scope.$on('data-updated', function () {
